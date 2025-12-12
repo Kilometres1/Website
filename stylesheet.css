@@ -64,6 +64,10 @@ img{
     display: flex;
     flex-direction: row;
 }
+
+#links a:link{text-decoration:none;color: rgb(129, 34, 223);}
+#links a:visited{text-decoration:none;color: rgb(129, 34, 223);}
+
 #links div{
     padding: 2px;
     font-style: italic;
