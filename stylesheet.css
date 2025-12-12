@@ -1,0 +1,78 @@
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-Regular.ttf);
+}
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-Italic.ttf);
+    font-style: italic;
+}
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+h1{
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: linear-gradient(70deg, rgb(66, 101, 226) 0px, rgb(66, 101, 226) 55%, rgb(189, 1, 218) 100%);
+    background-size: auto;
+    background-origin: padding-box;
+    font-size: 20pt;
+    font-style: italic;
+}
+
+body{
+    font-family: Nunito;
+    background: #A4BDE3;
+    background: linear-gradient(90deg,rgba(164, 189, 227, 1) 0%, rgba(100, 155, 227, 1) 49%, rgba(61, 122, 194, 1) 86%);
+}
+
+a.header:link {text-decoration:none;color: rgb(66, 101, 226);}
+a.header:visited {text-decoration:none;color: rgb(66, 101, 226);}
+a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
+
+img{
+    position: fixed;
+    bottom: 0;
+    left: 43vw;
+    height: 100vh;
+    pointer-events: none;   
+}
+
+.textbox{
+    width:fit-content;
+    /*backdrop-filter: blur(6px);*/
+    border: 0cap;
+    border-color:#cf5797;
+    border-style: solid;
+    position: fixed;
+    top: 50%;
+    left: 42%;
+    transform: translate3d(-50%,-50%,0px);
+}
+
+#links{
+    display: flex;
+    flex-direction: row;
+}
+#links div{
+    padding: 2px;
+    font-style: italic;
+    font-size: 10pt;
+}
+#updatesPane{
+    display: flex;
+    max-width: 280px;
+}
+#updatesPane div{
+    padding: 5px;
+}
