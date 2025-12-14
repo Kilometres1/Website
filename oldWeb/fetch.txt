@@ -1,0 +1,20 @@
+         .://:`              `://:.            root@obsidian
+       `hMMMMMMd/          /dMMMMMMh`          -------------
+        `sMMMMMMMd:      :mMMMMMMMs`           OS: Proxmox VE 8.3.5 x86_64
+`-/+oo+/:`.yMMMMMMMh-  -hMMMMMMMy.`:/+oo+/-`   Host: Dell Wyse Thin Client Desktop 5060 Rev 1
+`:oooooooo/`-hMMMMMMMyyMMMMMMMh-`/oooooooo:`   Kernel: 6.8.12-8-pve
+  `/oooooooo:`:mMMMMMMMMMMMMm:`:oooooooo/`     Uptime: 10 hours, 17 mins
+    ./ooooooo+- +NMMMMMMMMN+ -+ooooooo/.       Packages: 845 (dpkg)
+      .+ooooooo+-`oNMMMMNo`-+ooooooo+.         Shell: bash 5.2.15
+        -+ooooooo/.`sMMs`./ooooooo+-           Terminal: /dev/pts/0
+          :oooooooo/`..`/oooooooo:             CPU: AMD GX-424CC SOC (4) @ 2.400GHz
+          :oooooooo/`..`/oooooooo:             GPU: AMD ATI Radeon R4/R5 Graphics
+        -+ooooooo/.`sMMs`./ooooooo+-           Memory: 9704MiB / 14919MiB
+      .+ooooooo+-`oNMMMMNo`-+ooooooo+.
+    ./ooooooo+- +NMMMMMMMMN+ -+ooooooo/.
+  `/oooooooo:`:mMMMMMMMMMMMMm:`:oooooooo/`
+`:oooooooo/`-hMMMMMMMyyMMMMMMMh-`/oooooooo:`
+`-/+oo+/:`.yMMMMMMMh-  -hMMMMMMMy.`:/+oo+/-`
+        `sMMMMMMMm:      :dMMMMMMMs`
+       `hMMMMMMd/          /dMMMMMMh`
+         `://:`              `://:`

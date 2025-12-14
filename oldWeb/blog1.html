@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/png" href="icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+</head>
+<style>
+    #main-area{
+        line-height: 1.4;
+        transform: translate(0px,3px);
+    }
+    p{
+        font-size: 13px;
+    }
+
+</style>
+<body>
+
+    <div id="headerArea">
+        <div id="header" style="text-align: right">
+            <img src="plantdith2.png" alt="" style="transform: translate(25px,75px);pointer-events: none;width: 200;">
+        </div>
+        <nav id="navbar" style="margin-bottom: 0px;">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blogDirectory.html">Blog</a></li>
+                <li><a href="https://neocities.org/site/kilometres" target="_blank">Site profile</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Art</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div id="flex">
+        <aside id="leftSideBar">
+            <div class="window-main"> <!--updates-->
+                <div class="window-header">
+                    <table class="header-table">
+                        <tr>
+                            <td>Site Updates!</td>
+                            <td style="width: 20px;"><a href="nope.html"><img src="close.png" alt="" style="width: 100%;"></a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="padding-left: 10px; padding-top: 10px;">
+                    <b>10/4/25:</b>
+                    <p>Migrated blogs from old site, still need to do a write up of new stuff</p>
+                </div>
+            </div>
+            <div class="window-main"> <!--Visitor section-->
+                <div class="window-header">
+                    <table class="header-table">
+                        <tr>
+                            <td>Visitors</td>
+                            <td style="width: 20px; ;"><a href="nope.html"><img src="close.png" alt="" style="width: 100%;" ;></a></td>
+                        </tr>
+                    </table>
+                </div>
+                <table id="visitor" style="width: 100%; padding: 5px;">
+                    <tr>
+                        <th style="width: 50%;">
+                            <p>You are visitor:</p>
+                        </th>
+                        <th>
+                            <script language="javascript" type="text/javascript"
+                                src="//counter1.fc2.com/counter.php?id=40289887&main=1"></script><noscript><img
+                                    src="//counter1.fc2.com/counter_img.php?id=40289887&main=1" /></noscript>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div class="window-main"> <!--social links-->
+                <div class="window-header">
+                    <table class="header-table">
+                        <tr>
+                            <td>Links</td>
+                            <td style="width: 20px; ;"><a href="nope.html"><img src="close.png" alt="" style="width: 100%;" ;></a></td>
+                        </tr>
+                    </table>
+                </div>
+                <table>
+                    <tr><a href="https://www.tumblr.com/blog/kilometresinatree"><img src="tumblr.gif" alt="" style="padding-top: 0.5rem; width: 100%; scale: 90%;"></a></tr>
+                    <tr><a href="https://bsky.app/profile/kilometres03.bsky.social"><img src="bluesky.gif" alt="" style="padding-top: 0.5rem; width: 100%; scale: 90%;"></a></tr>
+                    <tr><a href="https://github.com/Kilometres1"><img src="github.gif" alt="" style="padding-top: 0.5rem; width: 100%; scale: 90%;"></a></tr>
+                    <tr><a href="https://steamcommunity.com/profiles/76561198240642386/"><img src="steam.gif" alt="" style="padding-top: 0.5rem; padding-bottom: 0.5rem; width: 100%; scale: 90%;"></a>
+                    </tr>
+                </table>
+            </div>
+            <div id="padders">
+                <img src="blinky1.webp">
+                <img src="blinky2.gif">
+                <img src="blinky3.gif">
+                <img src="blinkieBattery.gif">
+                <!--<img src="blinky5.gif" width="100%">-->
+                <img src="blinky6.gif">
+                <img src="blinky8.gif">
+                <img src="blinky9.gif">
+            </div>
+            <img id="cemetery" src="cemeteryTrans.png" alt="">
+        </aside>
+
+        <main>
+            <div id="main-area">
+                <a href="./blogDirectory.html"><-- Return to Directory</a>
+                <h1>First Blog Post</h1>
+                <b>Hello!</b><br>
+                This is my first post here! I am probably not going to be very active here, but I will make a post or two when I feel like it.
+                This first post will be about a little hobby I've been messing around with for a bit over a year, <b>Weather Satellite Imagery!</b><br>
+                The USA and Russia are the main groups launching and running the satellites I'm gonna be talking about, although the ESA and a few other countries have their own. I am using an  <a href="https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/">RTL-SDR kit!</a> , which came with an SDR and a Dipole Antenna.<br>
+                The two main "types" of Satellite I'm going to be referring to are the USA's NOAA series, currently consisting of NOAA 15, 18, and 19.<br>
+                The other is Russia's Meteor-M N2-x series, which currently consist of N2, N2-2, N2-3 and N2-4; The latter of which was launched this February!
+                <br>
+                
+                As of writing this, I've made a few dozen attempts at capturing an image, and even had a few successful attempts lol:
+                <figure>
+                    <img src="blog1/sat1.jpg" alt="A false-colour image showing clouds above western Europe, top and bottom of the image fade into noise" width="500">
+                    <figcaption>This was taken from NOAA 18 on the 27th of November 2022.</figcaption>
+                </figure> 
+                
+    
+            
+            </div>
+
+        </main>
+    </div>
+    </div>
+</body>
+</html>
