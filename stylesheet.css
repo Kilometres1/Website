@@ -76,7 +76,11 @@ img{
 #updatesPane{
     display: flex;
     max-width: 280px;
+
 }
 #updatesPane div{
     padding: 5px;
+    overflow: auto;
+    max-height: 100px;
+    scrollbar-width: none;
 }
