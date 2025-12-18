@@ -29,7 +29,7 @@
             display: flex;
             flex-direction: column;
             position: fixed;
-            
+            padding: 20px;
             top: 15%;
             left: 85%;
         }
@@ -37,14 +37,12 @@
             border-style: solid;
             margin: 5px;
             padding: 5px;
+            width: 50px;
+            transition: width 0.5s;
         }
         #pagebuttons a:link {text-decoration:none;color: rgb(66, 101, 226);}
         #pagebuttons a:visited {text-decoration:none;color: rgb(66, 101, 226);}
-        #pagebuttons a:hover {text-decoration:none;color: rgb(189, 1, 218);animation-name: buttonHover;animation-duration: 1s;}
-        @keyframes buttonHover {
-          from {width: 50px;}
-          to {width: 70px;}
-        }
+        #pagebuttons a:hover {text-decoration:none;;color: rgb(189, 1, 218);width:100px}
     </style>
     <script>
         function defaulthide(){
@@ -61,7 +59,7 @@
     </script>
     <body onload="defaulthide()">
         <div id="pagebuttons">
-            <a id="button1" href="#" onclick="return show('Page1','Page2','Page3');">Page 1</a>
+            <a href="#" onclick="return show('Page1','Page2','Page3');">Page 1</a>
             <a href="#" onclick="return show('Page2','Page1','Page3');">Page 2</a>
             <a href="#" onclick="return show('Page3','Page1','Page2');">Page 3</a>
         </div>
