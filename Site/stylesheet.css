@@ -18,6 +18,9 @@
     font-weight: bold;
     font-style: italic;
 }
+ @media only screen and (orientation: portrait){
+    .textbox {min-width: 350px;}
+}
 
 h1{
     background-color: rgba(0, 0, 0, 0);
@@ -43,8 +46,8 @@ a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
 img{
     position: fixed;
     bottom: 0;
-    left: 45vw;
-    height: 100vh;
+    left: 45%;
+    height: 100%;
     pointer-events: none;   
 }
 
