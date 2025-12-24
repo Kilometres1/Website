@@ -9,18 +9,67 @@
         }
         #albumselect{
             display: flex;
-            flex-direction: column;
+            flex-direction: column-reverse;
+            transform: translateX(50px);
         }
         #albumselect img{
-            width: 150px;
+            width: 200px;
+            height: 200px;
+        }
+        #albumselect div{
+            display: flex;
+            flex-direction: row;
+        }
+        #albumselect div div {
+            display: none;
+        }
+        #albumselect img:hover + div{
+            display: block;
+            transform: translateX(10%);
         }
     </style>
     <body>
-        <img src="MusicResources/Screenshot 2025-11-25 182138.png" alt="" style="width: 100%;">
+        <p>Albums & EPs I like!</p>
         <div id="albumselect">
-            <img src="MusicResources/smile.png" alt="">
-            <img src="MusicResources/idkhow2.jpg" alt="">
-            <img src="MusicResources/idkhow1.png" alt="">
+            <div>
+                <img src="MusicResources/idkhow1.png" alt="" style="transform: rotate(5deg);">
+                <div>
+                    <h3>1981 Extended Play - IDKHOW</h3>
+                    <p>yayyyy</p>
+                </div>
+            </div>
+            <div>
+                <img src="MusicResources/idkhow2.jpg" alt="" style="transform: rotate(-5deg);">
+                <div>
+                    <h3>RAZZMATAZZ - IDKHOW</h3>
+                    <p>yayyyy</p>
+                </div>
+            </div>
+            <div>
+                <img src="MusicResources/smile.png" alt="" style="transform: rotate(5deg);">
+                <div>
+                    <h3>SMILE! :D - Porter Robinson</h3>
+                    <p>yayyyy</p>
+                </div>
+            </div>
+            <div style="transform: translateX(-50px);">
+                <img src="MusicResources/constcompan.jpg" alt="" style="transform: rotate(-5deg);">
+                <img src="MusicResources/constcompandeluxe.jpg" alt="" style="transform: rotate(5deg) translateX(-50px);">
+                <div>
+                    <h3>Constant Companions - Jamie Paige</h3>
+                    <p>yayyyy</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
         </div>
     </body>
 </html>

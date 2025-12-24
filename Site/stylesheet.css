@@ -19,9 +19,19 @@
     font-style: italic;
 }
  @media only screen and (orientation: portrait){
-    .textbox {min-width: 350px;}
+    .textbox {
+        min-width: 600px;
+        transform: translate3d(-30%,-50%,0px);
+        left: 50%;
+    }
 }
-
+ @media only screen and (orientation: landscape){
+    .textbox {
+        width:fit-content;
+        transform: translate3d(-50%,-50%,0px);
+        left: 42%;
+    }
+}
 h1{
     background-color: rgba(0, 0, 0, 0);
     background-repeat: repeat;
@@ -52,15 +62,15 @@ img{
 }
 
 .textbox{
-    width:fit-content;
+    
     /*backdrop-filter: blur(6px);*/
     border: 0cap;
     border-color:#cf5797;
     border-style: solid;
     position: fixed;
     top: 50%;
-    left: 42%;
-    transform: translate3d(-50%,-50%,0px);
+    
+    
 }
 
 #links{
