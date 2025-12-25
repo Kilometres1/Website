@@ -20,20 +20,75 @@
 }
  @media only screen and (orientation: portrait){
     .textbox {
-        min-width: 600px;
-        transform: translate3d(-30%,-50%,0px);
-        left: 50%;
+        position: fixed;
+        min-width: 50%;
+        width: 500px;
+        transform: translate3d(-30%,-50%,0px) scale(200%);
+        top: 50%;
+        left: 40%;
+    }
+    #header{
+        position: static;
+    }
+    h1{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    #below{
+        display: none;
+    }
+    body{
+        max-height: 100vh;
+    }
+    #radio{
+        position: fixed;
     }
 }
  @media only screen and (orientation: landscape){
     .textbox {
+        position: relative;
         width:fit-content;
-        transform: translate3d(-50%,-50%,0px);
-        left: 42%;
+        transform: translate3d(-50%,30vh,0px) scale(120%);
+        left: 45%;
+
+    }
+    #header{
+        position: static;
+    }
+    h1{
+        position: static;
+    }
+    #radio{
+        position: absolute;
+    }
+    #above{
+        height: 100vh;
+    }
+    #below{
+        transform: translateY(-8px);
+        height: 103vh;
+        background-color: #0a0a0a;
+    }
+    #navbar{
+        box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
+        background-image: linear-gradient(90deg,navy,#1084d0);
+        padding: 3px 2px 3px 3px;
+    }
+    #navbar-text{
+        color: white;
     }
 }
-h1{
-    background-color: rgba(0, 0, 0, 0);
+
+body{
+    margin: 0px;
+    font-family: Nunito;
+    background: #885050;
+    background: linear-gradient(85deg,rgba(164, 189, 227, 1) 0%, rgba(100, 155, 227, 1) 49%, rgba(61, 122, 194, 1) 86%);
+
+}
+#header{
+    margin: 10px;
     background-repeat: repeat;
     background-attachment: scroll;
     background-image: linear-gradient(70deg, rgb(66, 101, 226) 0px, rgb(66, 101, 226) 55%, rgb(189, 1, 218) 100%);
@@ -43,20 +98,14 @@ h1{
     font-style: italic;
 }
 
-body{
-    font-family: Nunito;
-    background: #A4BDE3;
-    background: linear-gradient(90deg,rgba(164, 189, 227, 1) 0%, rgba(100, 155, 227, 1) 49%, rgba(61, 122, 194, 1) 86%);
-}
 
 a.header:link {text-decoration:none;color: rgb(66, 101, 226);}
 a.header:visited {text-decoration:none;color: rgb(66, 101, 226);}
 a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
 
-img{
-    position: fixed;
-    bottom: 0;
-    left: 45%;
+#radio{
+    top: 0;
+    left: 50%;
     height: 100%;
     pointer-events: none;   
 }
@@ -67,10 +116,6 @@ img{
     border: 0cap;
     border-color:#cf5797;
     border-style: solid;
-    position: fixed;
-    top: 50%;
-    
-    
 }
 
 #links{
