@@ -44,6 +44,9 @@
     #radio{
         position: fixed;
     }
+    #bottom{
+        bottom: 0%;
+    }
 }
  @media only screen and (orientation: landscape){
     .textbox {
@@ -78,6 +81,9 @@
     }
     #navbar-text{
         color: white;
+    }
+    #bottom{
+        bottom: -100%;
     }
 }
 
@@ -142,4 +148,10 @@ a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
     overflow: auto;
     max-height: 100px;
     scrollbar-width: none;
+}
+#bottom{
+    color:white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }

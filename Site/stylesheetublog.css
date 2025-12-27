@@ -18,3 +18,25 @@
     font-weight: bold;
     font-style: italic;
 }
+body{
+    font-family: Nunito;
+    background-image: url(ublogResources/background.png);
+}
+#blogs{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column-reverse;
+    width: 80%;
+    max-width:800px;
+}
+#blogs > div{
+    border-style: dashed;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: white;
+}
+#blogs img{
+    width: 100%;
+}
