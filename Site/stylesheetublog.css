@@ -1,25 +1,25 @@
 @font-face {
-    font-family: Nunito;
-    src: url(https://sadhost.neocities.org/fonts/Nunito-Regular.ttf);
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-Regular.ttf);
 }
 @font-face {
-    font-family: Nunito;
-    src: url(https://sadhost.neocities.org/fonts/Nunito-Bold.ttf);
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-Bold.ttf);
     font-weight: bold;
 }
 @font-face {
-    font-family: Nunito;
-    src: url(https://sadhost.neocities.org/fonts/Nunito-Italic.ttf);
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-Italic.ttf);
     font-style: italic;
 }
 @font-face {
-    font-family: Nunito;
-    src: url(https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf);
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-BoldItalic.ttf);
     font-weight: bold;
     font-style: italic;
 }
 body{
-    font-family: Nunito;
+    font-family: Atkinson;
     background-image: url(ublogResources/background.png);
 }
 #blogs{
@@ -33,9 +33,27 @@ body{
 }
 #blogs > div{
     border-style: dashed;
+    border-color: rgb(173, 173, 173);
     padding: 5px;
     margin-top: 10px;
-    background-color: white;
+    background-color: rgb(66, 61, 61);
+}
+#blogs > div > h3{
+    font-size: large;
+    color: white;
+    text-decoration: overline;
+}
+#blogs > div > p{
+    font-size: large;
+    color: rgb(255, 255, 255);
+}
+a{
+    font-size: large;
+    color: rgb(27, 219, 229);
+}
+#blogs > div > i{
+    font-size: medium;
+    color: rgb(199, 199, 199);
 }
 #blogs img{
     width: 100%;
