@@ -21,6 +21,7 @@
 body{
     font-family: Atkinson;
     background-image: url(ublogResources/background.png);
+    background-attachment: fixed;
 }
 #blogs{
     position: absolute;
@@ -47,7 +48,7 @@ body{
     font-size: large;
     color: rgb(255, 255, 255);
 }
-a{
+#blogs a{
     font-size: large;
     color: rgb(27, 219, 229);
 }
