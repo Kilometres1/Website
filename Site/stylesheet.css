@@ -46,6 +46,10 @@
     }
     #bottom{
         bottom: 0%;
+        font-size: 2rem;
+    }
+    #links{
+        width: 70%;
     }
 }
  @media only screen and (orientation: landscape){
@@ -84,7 +88,14 @@
     }
     #bottom{
         bottom: -100%;
+        font-size: 1rem;
     }
+    #links{
+        width: 90%;
+    }
+    /*#links div{
+        border-left: #b1dfff dashed;
+    }*/
 }
 
 body{
@@ -128,6 +139,7 @@ a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
 #links{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #links a:link{text-decoration:none;color: rgb(129, 34, 223);}
@@ -152,6 +164,10 @@ a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
 #bottom{
     color:white;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+}
+#bottom > div{
+    width: fit-content;
+    display: block;
+    margin: auto;
 }
