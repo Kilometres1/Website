@@ -1,0 +1,39 @@
+@font-face {
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-Regular.ttf);
+}
+@font-face {
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-Italic.ttf);
+    font-style: italic;
+}
+@font-face {
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+html{
+    background-color: black;
+    font-family: Atkinson;
+}
+body{
+    color: white;
+}
+body > div{
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+#pcList{
+    display: flex;
+    flex-direction: column;
+}
+#pcList div{
+    padding: 10px;
+}
