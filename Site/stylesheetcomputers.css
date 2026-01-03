@@ -25,10 +25,26 @@ html{
 body{
     color: white;
 }
+body > a{
+    color: grey;
+}
 body > div{
     display: block;
     margin: auto;
     width: fit-content;
+}
+table{
+    margin-top: 50%;
+    padding: 10px;
+}
+/*tr{
+}*/
+td{
+    border-top: 3px dashed rgb(123, 123, 123);
+    padding: 10px;
+}
+td > img{
+    height: 50px;
 }
 #pcList{
     display: flex;

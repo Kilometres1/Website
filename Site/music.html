@@ -8,6 +8,7 @@
             font-family: Nunito;
         }
         #albumselect{
+            position: relative;
             display: flex;
             flex-direction: column-reverse;
             transform: translateX(50px);
@@ -15,48 +16,72 @@
         #albumselect img{
             width: 200px;
             height: 200px;
+            z-index: 2;
         }
         #albumselect div{
             display: flex;
             flex-direction: row;
         }
-        #albumselect div div {
+        #albumselect div .text {
             display: none;
+            transform: translateX(-90px);
+            width: 90%;
         }
-        #albumselect img:hover + div{
+        .text div{
+            display: flex;
+            justify-content: space-between;
+        }
+        #albumselect .disc:hover + div{
             display: block;
-            transform: translateX(10%);
+        }
+        #albumselect .art:hover + img + div{
+            display: block;
+        }
+        .disc{
+            position: relative;
+            transform: translateX(-100%);
+            transition: transform 0.5s;
+        }
+        #albumselect .art:hover + .disc{
+            transform: translateX(-50%) rotate(90deg);
+        }
+        #albumselect .disc:hover{
+            transform: translateX(-50%) rotate(90deg);
         }
     </style>
     <body>
         <p>Albums & EPs I like!</p>
         <div id="albumselect">
             <div>
-                <img src="MusicResources/idkhow1.png" alt="" style="transform: rotate(5deg);">
-                <div>
-                    <h3>1981 Extended Play - IDKHOW</h3>
+                <img class="art" src="MusicResources/idkhow1.png" alt="">
+                <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
+                <div class="text">
+                    <div><h3>1981 Extended Play - IDKHOW</h3><h3>★★★☆☆</h3></div>
+                    
                     <p>yayyyy</p>
                 </div>
             </div>
             <div>
-                <img src="MusicResources/idkhow2.jpg" alt="" style="transform: rotate(-5deg);">
-                <div>
-                    <h3>RAZZMATAZZ - IDKHOW</h3>
+                <img class="art" src="MusicResources/idkhow2.jpg" alt="">
+                <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
+                <div class="text">
+                    <div><h3>RAZZMATAZZ - IDKHOW</h3><h3>★★★★☆</h3></div>
                     <p>yayyyy</p>
                 </div>
             </div>
             <div>
-                <img src="MusicResources/smile.png" alt="" style="transform: rotate(5deg);">
-                <div>
-                    <h3>SMILE! :D - Porter Robinson</h3>
+                <img class="art" src="MusicResources/smile.png" alt="">
+                <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
+                <div class="text">
+                    <div><h3>SMILE! :D - Porter Robinson</h3><h3>★★★★☆</h3></div>
                     <p>yayyyy</p>
                 </div>
             </div>
-            <div style="transform: translateX(-50px);">
-                <img src="MusicResources/constcompan.jpg" alt="" style="transform: rotate(-5deg);">
-                <img src="MusicResources/constcompandeluxe.jpg" alt="" style="transform: rotate(5deg) translateX(-50px);">
-                <div>
-                    <h3>Constant Companions - Jamie Paige</h3>
+            <div>
+                <img class="art" src="MusicResources/constcompandeluxe.jpg" alt="">
+                <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
+                <div class="text">
+                    <div><h3>Constant Companions - Jamie Paige</h3><h3>★★★★☆</h3></div>
                     <p>yayyyy</p>
                 </div>
             </div>
