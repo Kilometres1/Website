@@ -4,88 +4,65 @@
 
     </head>
     <style>
-        body{
-            font-family: Nunito;
-        }
-        #albumselect{
-            position: relative;
-            display: flex;
-            flex-direction: column-reverse;
-            transform: translateX(50px);
-        }
-        #albumselect img{
-            width: 200px;
-            height: 200px;
-            z-index: 2;
-        }
-        #albumselect div{
-            display: flex;
-            flex-direction: row;
-        }
-        #albumselect div .text {
-            display: none;
-            transform: translateX(-90px);
-            width: 90%;
-        }
-        .text div{
-            display: flex;
-            justify-content: space-between;
-        }
-        #albumselect .disc:hover + div{
-            display: block;
-        }
-        #albumselect .art:hover + img + div{
-            display: block;
-        }
-        .disc{
-            position: relative;
-            transform: translateX(-100%);
-            transition: transform 0.5s;
-        }
-        #albumselect .art:hover + .disc{
-            transform: translateX(-50%) rotate(90deg);
-        }
-        #albumselect .disc:hover{
-            transform: translateX(-50%) rotate(90deg);
-        }
     </style>
     <body>
-        <p>Albums & EPs I like!</p>
-        <div id="albumselect">
-            <div>
-                <img class="art" src="MusicResources/idkhow1.png" alt="">
-                <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
-                <div class="text">
-                    <div><h3>1981 Extended Play - IDKHOW</h3><h3>★★★☆☆</h3></div>
-                    
-                    <p>yayyyy</p>
+        <p><a href="index.html">Albums & EPs I like!</a></p>
+        <div id="main">
+            
+            <div id="albumselect">
+                <div>
+                    <img class="art" src="MusicResources/idkhow1.png" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
+                    <div class="text">
+                        <div><h3>1981 Extended Play - IDKHOW</h3><h3>★★★★☆</h3></div>
+                        
+                        <p>yayyyy</p>
+                    </div>
+                </div>
+                <div>
+                    <img class="art" src="MusicResources/idkhow2.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
+                    <div class="text">
+                        <div><h3>RAZZMATAZZ - IDKHOW</h3><h3>★★★★☆</h3></div>
+                        <p>yayyyy</p>
+                    </div>
+                </div>
+                <div>
+                    <img class="art" src="MusicResources/smile.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
+                    <div class="text">
+                        <div><h3>SMILE! :D - Porter Robinson</h3><h3>★★★★★</h3></div>
+                        <p>yayyyy</p>
+                    </div>
+                </div>
+                <div>
+                    <img class="art" src="MusicResources/constcompandeluxe.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
+                    <div class="text">
+                        <div><h3>Constant Companions - Jamie Paige</h3><h3>★★★★☆</h3></div>
+                        <p>My first proper introducion to non-miku vocaloid/voicesynth/whatever songs, with <i>Machine Love</i> obviously being my favourite. More recently, songs like <i>ROT FOR CLOUT, I Wish That I Could Fall,</i> and <i>Cadmium Colors</i> have grown on me a lot!!</p>
+                        <p>I also nabbed the deluxe edition of this one on CD (big fan of BIRDBRAIN and Dance Delightful!!)</p>
+                    </div>
+                </div>
+                <div>
+                    <img class="art" src="MusicResources/ponystep.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
+                    <div class="text">
+                        <div><h3>Love and Ponystep - Vylet Pony</h3><h3>★★★★★</h3></div>
+                        <p>My <i>second</i> favourite album of 2025, although probably the one I enjoyed listening to the most <333</p>
+                        <p>Vylet also released a <a href="https://static.wikitide.net/vyletponywiki/6/67/Love_%26_Ponystep_Lyrics_Booklet.pdf">lyrics/notes</a> booklet which was VERY COOL to read through!</p>
+                    </div>
+                </div>
+                <div>
+                    <img class="art" src="MusicResources/waterdogs.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
+                    <div class="text">
+                        <div><h3>Water Dogs - Penelope Scott</h3><h3>★★★★★</h3></div>
+                        <p>My most listened-to album of 2025, and my favourite Penelope Scott release to date: Water Dogs!</p>
+                        <p>This album also features my most listened-to song of 2025, <i>Spirit</i>!</p>
+                    </div>
                 </div>
             </div>
-            <div>
-                <img class="art" src="MusicResources/idkhow2.jpg" alt="">
-                <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
-                <div class="text">
-                    <div><h3>RAZZMATAZZ - IDKHOW</h3><h3>★★★★☆</h3></div>
-                    <p>yayyyy</p>
-                </div>
-            </div>
-            <div>
-                <img class="art" src="MusicResources/smile.png" alt="">
-                <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
-                <div class="text">
-                    <div><h3>SMILE! :D - Porter Robinson</h3><h3>★★★★☆</h3></div>
-                    <p>yayyyy</p>
-                </div>
-            </div>
-            <div>
-                <img class="art" src="MusicResources/constcompandeluxe.jpg" alt="">
-                <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
-                <div class="text">
-                    <div><h3>Constant Companions - Jamie Paige</h3><h3>★★★★☆</h3></div>
-                    <p>yayyyy</p>
-                </div>
-            </div>
-
 
 
 
