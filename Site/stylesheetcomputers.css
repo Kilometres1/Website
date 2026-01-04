@@ -46,6 +46,9 @@ td{
 td > img{
     height: 50px;
 }
+td > a > img{
+    height: 50px;
+}
 #pcList{
     display: flex;
     flex-direction: column;
