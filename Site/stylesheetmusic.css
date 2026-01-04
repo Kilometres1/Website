@@ -18,3 +18,64 @@
     font-weight: bold;
     font-style: italic;
 }
+body{
+    font-family: Nunito;
+    background-image: linear-gradient(#00c8ff,#00e08a);
+}
+#albumselect{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+#albumselect img{
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+}
+#albumselect div{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    max-height: 200px;
+}
+#albumselect div .text {
+    display:none;
+    transform: translateX(-90px);
+    width: 90%;
+    color: white;
+}
+.text div{
+    display: flex;
+    justify-content: space-between;
+}
+.text div h3 + h3{
+    color: #00E054;
+}
+#albumselect .disc:hover + div{
+    display: block;
+}
+#albumselect .art:hover + img + div{
+    display: block;
+}
+#albumselect:hover .text:hover{
+    display: block;
+}
+.disc{
+    position: relative;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+}
+#albumselect .art:hover + .disc{
+    transform: translateX(-50%) rotate(90deg);
+}
+#albumselect .disc:hover{
+    transform: translateX(-50%) rotate(90deg);
+}
+#main{
+    background-color: #14181c;
+    width: 85%;
+    margin: auto;
+}
+#main a{
+    color: #00c8ff;
+}
