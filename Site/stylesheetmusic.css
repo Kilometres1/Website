@@ -18,64 +18,118 @@
     font-weight: bold;
     font-style: italic;
 }
-body{
+@font-face {
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-Italic.ttf);
+    font-style: italic;
+}
+html{
     font-family: Nunito;
     background-image: linear-gradient(#00c8ff,#00e08a);
 }
-#albumselect{
-    position: relative;
+body{
+    margin: 0;
+}
+#main{
+    margin: 10px;
+}
+#header{
+    padding: 10px;
+    background-color: #14181c;
+    font-family: Atkinson;
+    font-style: normal;
     display: flex;
-    flex-direction: column-reverse;
+    color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+    
 }
-#albumselect img{
-    width: 200px;
-    height: 200px;
-    z-index: 2;
+#header > div{
+    display: flex;
+    flex-direction: column;
 }
-#albumselect div{
+#header a{
+    color: #00c8ff;
+    text-decoration: none;
+}
+h3{
+    text-decoration: overline;
+    font-family: Atkinson;
+}
+h5, ol{
+    font-family: Atkinson;
+}
+
+/*THE SECTION FOR THE ALBUMS*/
+
+
+#albums{
     display: flex;
     flex-direction: row;
-    padding: 10px;
+    flex-wrap: wrap;
+}
+#albums > div{
     max-height: 200px;
-}
-#albumselect div .text {
-    display:none;
-    transform: translateX(-90px);
-    width: 90%;
-    color: white;
-}
-.text div{
+    max-width: 600px;
+    padding: 10px;
+    border: solid;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    width: fit-content;
+    margin: 10px;
+    background-color: #14181c;
 }
-.text div h3 + h3{
-    color: #00E054;
+
+.graphic img{
+    width: 200px;
 }
-#albumselect .disc:hover + div{
-    display: block;
-}
-#albumselect .art:hover + img + div{
-    display: block;
-}
-#albumselect:hover .text:hover{
-    display: block;
+
+.art{
+    z-index: 2;
+    position:relative;
 }
 .disc{
-    position: relative;
+    z-index: 1;
+    position:absolute;
     transform: translateX(-100%);
     transition: transform 0.5s;
 }
-#albumselect .art:hover + .disc{
+.spacing{
+    width: 300px;
+}
+#albums .art:hover + .disc{
     transform: translateX(-50%) rotate(90deg);
 }
-#albumselect .disc:hover{
+#albums .disc:hover{
     transform: translateX(-50%) rotate(90deg);
 }
-#main{
-    background-color: #14181c;
-    width: 85%;
-    margin: auto;
+.text{
+    overflow:auto;
+    position: relative;
+    color: white;
+    scrollbar-width: none;
 }
-#main a{
+.text h4,h5{
+    line-height: 0;
+}
+.text > h5,li,p{
+    color: rgb(159, 159, 159);
+}
+.text h3{
+    color: #00e08a;
+}
+#albums a{
     color: #00c8ff;
+}
+
+
+
+
+
+
+/*THE SECTION FOR THE WRAPPED*/
+
+#wrapped img{
+    width: 200px;
 }

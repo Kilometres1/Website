@@ -1,77 +1,151 @@
 <html>
     <head>
         <link href="stylesheetmusic.css" rel="stylesheet" type="text/css" media="all">
-
+        <meta charset="UTF-8">
     </head>
     <style>
     </style>
     <body>
-        <p><a href="index.html">Albums & EPs I like!</a></p>
-        <div id="main">
-            
-            <div id="albumselect">
-                <div>
-                    <img class="art" src="MusicResources/idkhow1.png" alt="">
-                    <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
-                    <div class="text">
-                        <div><h3>1981 Extended Play - IDKHOW</h3><h3>★★★★☆</h3></div>
-                        
-                        <p>yayyyy</p>
-                    </div>
-                </div>
-                <div>
-                    <img class="art" src="MusicResources/idkhow2.jpg" alt="">
-                    <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
-                    <div class="text">
-                        <div><h3>RAZZMATAZZ - IDKHOW</h3><h3>★★★★☆</h3></div>
-                        <p>yayyyy</p>
-                    </div>
-                </div>
-                <div>
-                    <img class="art" src="MusicResources/smile.jpg" alt="">
-                    <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
-                    <div class="text">
-                        <div><h3>SMILE! :D - Porter Robinson</h3><h3>★★★★★</h3></div>
-                        <p>yayyyy</p>
-                    </div>
-                </div>
-                <div>
-                    <img class="art" src="MusicResources/constcompandeluxe.jpg" alt="">
-                    <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
-                    <div class="text">
-                        <div><h3>Constant Companions - Jamie Paige</h3><h3>★★★★☆</h3></div>
-                        <p>My first proper introducion to non-miku vocaloid/voicesynth/whatever songs, with <i>Machine Love</i> obviously being my favourite. More recently, songs like <i>ROT FOR CLOUT, I Wish That I Could Fall,</i> and <i>Cadmium Colors</i> have grown on me a lot!!</p>
-                        <p>I also nabbed the deluxe edition of this one on CD (big fan of BIRDBRAIN and Dance Delightful!!)</p>
-                    </div>
-                </div>
-                <div>
-                    <img class="art" src="MusicResources/ponystep.jpg" alt="">
-                    <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
-                    <div class="text">
-                        <div><h3>Love and Ponystep - Vylet Pony</h3><h3>★★★★★</h3></div>
-                        <p>My <i>second</i> favourite album of 2025, although probably the one I enjoyed listening to the most <333</p>
-                        <p>Vylet also released a <a href="https://static.wikitide.net/vyletponywiki/6/67/Love_%26_Ponystep_Lyrics_Booklet.pdf">lyrics/notes</a> booklet which was VERY COOL to read through!</p>
-                    </div>
-                </div>
-                <div>
-                    <img class="art" src="MusicResources/waterdogs.jpg" alt="">
-                    <img class="disc" src="MusicResources/cd.png" alt="" style="z-index: 1;">
-                    <div class="text">
-                        <div><h3>Water Dogs - Penelope Scott</h3><h3>★★★★★</h3></div>
-                        <p>My most listened-to album of 2025, and my favourite Penelope Scott release to date: Water Dogs!</p>
-                        <p>This album also features my most listened-to song of 2025, <i>Spirit</i>!</p>
-                    </div>
-                </div>
+        <div id="header">
+            <div>
+                <a href="index.html">⬑Return</a>
+                <a href="#albums">⌾ Albums</a>
+                <a href="#wrapped">⌾ By the Numbers</a>
             </div>
+            <div id="listeningto">
+                <div id="lastfm-widget">
+                    <div id="widget">&#127911; <span id="song">&#8987;</span></div>
+                    <div><p><small>powered by <a href="https://github.com/biancarosa/lastfm-last-played" target="_blank">@biancarosa/lastfm-last-played</a></small></p></div>
+                </div>
+                <script type="text/javascript">
+                    let user = 'kilometres__';
+                    let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
+                    let song = document.querySelector('#song');
+                    fetch(url)
+                        .then(function (response) {
+                            return response.json()
+                        }).then(function (json) {
+                            song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
+                        });
+                </script>
+            </div>
+        </div>
+        <div id="main">
+            <div><h3><i>Albums</i></h3></div>
+            <div id="albums">
 
 
+                <div>
+                    <div class="graphic">
+                        <img class="art" src="MusicResources/persona.jpg" alt="">
+                        <img class="disc" src="MusicResources/cd.png" alt="">
+                        <div class="spacing"></div>
+                    </div>
+                    <div class="text">
+                        <h4>Persona - half•alive</h4>
+                        <h3>★★★★☆</h3>
+                        <h5>Favourite Songs:</h5>
+                        <ol>
+                            <li>Sophie's House</li>
+                            <li>Automatic</li>
+                            <li>Long Drive</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="graphic">
+                        <img class="art" src="MusicResources/ponystep.jpg" alt="">
+                        <img class="disc" src="MusicResources/cd.png" alt="">
+                        <div class="spacing"></div>
+                    </div>
+                    <div class="text">
+                        <h4>Love & Ponystep - Vylet Pony</h4>
+                        <h3>★★★★★</h3>
+                        <h5>Favourite Songs:</h5>
+                        <ol>
+                            <li>Wonka X Howl</li>
+                            <li>Falling in Love With a Corporate Illustration</li>
+                            <li>Love & Ponystep</li>
+                        </ol>
+                        <h5>Notes:</h5>
+                        <p>LOVE THIS ALBUM!</p>
+                        <p>Honestly my first proper go at listening to her work, having heard other one-off songs like "Antonymph" and "Lesbian Ponys With Weapons"</p>
+                        <p>ALSO the <a href="https://static.wikitide.net/vyletponywiki/6/67/Love_%26_Ponystep_Lyrics_Booklet.pdf">lyrics/notes</a> booklet she released alongside the album is so cool!</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="graphic">
+                        <img class="art" src="MusicResources/gloomdiv.jpg" alt="">
+                        <img class="disc" src="MusicResources/cd.png" alt="">
+                        <div class="spacing"></div>
+                    </div>
+                    <div class="text">
+                        <h4>GLOOM DIVISION - IDKHOW</h4>
+                        <h3>★★★★☆</h3>
+                        <h5>Favourite Songs:</h5>
+                        <ol>
+                            <li>DOWNSIDE</li>
+                            <li>KISS & TELL</li>
+                            <li>SPKOTHDVL</li>
+                        </ol>
+                        <h5>Notes:</h5>
+                        <p>Saw Dallon perform this album live! Will Joseph Cook made an appearance, making that the second time I've seen him, both times at IDKHOW concerts lol</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="graphic">
+                        <img class="art" src="MusicResources/waterdogs.jpg" alt="">
+                        <img class="disc" src="MusicResources/cd.png" alt="">
+                        <div class="spacing"></div>
+                    </div>
+                    <div class="text">
+                        <h4>Water Dogs - Penelope Scott</h4>
+                        <h3>★★★★★</h3>
+                        <h5>Favourite Songs:</h5>
+                        <ol>
+                            <li>Spirit</li>
+                            <li>Charlotte's Hymn</li>
+                            <li>Water Girl</li>
+                        </ol>
+                        <h5>Notes:</h5>
+                        <p>This was my top album this year, with Spirit being my favourite! If you look at the <a href="#wrapped">"by the numbers"</a> section, you can see Penelope's been one of my favs for a while.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="graphic">
+                        <img class="art" src="MusicResources/constcompandeluxe.jpg" alt="">
+                        <img class="disc" src="MusicResources/cd.png" alt="">
+                        <div class="spacing"></div>
+                    </div>
+                    <div class="text">
+                        <h4>Constant Companions - Jamie Paige</h4>
+                        <h3>★★★★☆</h3>
+                        <h5>Favourite Songs:</h5>
+                        <ol>
+                            <li>Machine Love</li>
+                            <li>Dance Delightful</li>
+                            <li>Cadmium Colors</li>
+                        </ol>
+                        <h5>Notes:</h5>
+                        <p>My first proper introducion to non-miku vocaloid/voicesynth/whatever songs, with <i>Machine Love</i> obviously being my favourite. More recently, songs like <i>ROT FOR CLOUT, I Wish That I Could Fall,</i> and <i>Cadmium Colors</i> have grown on me a lot!!</p>
+                        <p>I also nabbed the deluxe edition of this one on CD (big fan of BIRDBRAIN and Dance Delightful!!)</p>                </div>
+                </div>
 
 
-
-
-
-
-
+            </div>
+            <h3><i>By the Numbers</i></h3>
+            <div id="wrapped">
+                <img src="MusicResources/wrap2025.png" alt="">
+                <img src="MusicResources/wrap2024.png" alt="">
+                <img src="MusicResources/wrap2023.png" alt="">
+                <img src="MusicResources/wrap2022.png" alt="">
+                <img src="MusicResources/wrap2021.png" alt="">
+                <img src="MusicResources/wrap2020.png" alt="">
+            </div>
         </div>
     </body>
 </html>
