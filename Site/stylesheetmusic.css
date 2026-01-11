@@ -53,7 +53,7 @@ body{
     color: #00c8ff;
     text-decoration: none;
 }
-h3{
+h3,h2{
     text-decoration: overline;
     font-family: Atkinson;
 }
@@ -64,12 +64,12 @@ h5, ol{
 /*THE SECTION FOR THE ALBUMS*/
 
 
-#albums{
+#albums .year{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-#albums > div{
+.album{
     max-height: 200px;
     max-width: 600px;
     padding: 10px;
@@ -92,26 +92,31 @@ h5, ol{
 .disc{
     z-index: 1;
     position:absolute;
-    transform: translateX(-100%);
+    transform: translateX(-100%) rotate(-90deg);
     transition: transform 0.5s;
+    animation-name: spin;
+    animation-duration: 2s;
 }
 .spacing{
     width: 300px;
 }
 #albums .art:hover + .disc{
-    transform: translateX(-50%) rotate(90deg);
+    transform: translateX(-50%) rotate(0deg);
 }
 #albums .disc:hover{
-    transform: translateX(-50%) rotate(90deg);
+    transform: translateX(-50%) rotate(0deg);
 }
+
+
+
 .text{
     overflow:auto;
     position: relative;
     color: white;
     scrollbar-width: none;
 }
-.text h4,h5{
-    line-height: 0;
+.text > h4{
+    margin-top: 0;
 }
 .text > h5,li,p{
     color: rgb(159, 159, 159);

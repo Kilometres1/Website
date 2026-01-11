@@ -35,6 +35,9 @@
         top: 0;
         width: 100%;
     }
+    #above{
+        height: 100%;
+    }
     #below{
         display: none;
     }
@@ -54,10 +57,11 @@
 }
  @media only screen and (orientation: landscape){
     .textbox {
-        position: relative;
+        position: absolute;
         width:fit-content;
-        transform: translate3d(-50%,30vh,0px) scale(120%);
+        transform: translate3d(-50%,-50%,0px) scale(120%);
         left: 50%;
+        top: 50%;
 
     }
     #header{
@@ -74,11 +78,10 @@
     }
     #below{
         
-        height: 99vh;
+        height: 100vh;
         background-color: #0a0a0a;
     }
     #navbar{
-        transform: translateY(-8px);
         box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
         background-image: linear-gradient(90deg,navy,#1084d0);
         padding: 3px 2px 3px 3px;
@@ -91,22 +94,24 @@
         font-size: 1rem;
     }
     #links{
-        width: 80%;
+        width: 75%;
     }
     /*#links div{
         border-left: #b1dfff dashed;
     }*/
 }
-
+body::-webkit-scrollbar {
+  display: none;
+}
 body{
     margin: 0px;
     font-family: Nunito;
     background: #885050;
-    background: linear-gradient(85deg,rgba(164, 189, 227, 1) 0%, rgba(100, 155, 227, 1) 49%, rgba(61, 122, 194, 1) 86%);
-
+    -ms-overflow-style: none;
 }
 #header{
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
+    transform: translateY(10px);
     background-repeat: repeat;
     background-attachment: scroll;
     background-image: linear-gradient(70deg, rgb(66, 101, 226) 0px, rgb(66, 101, 226) 55%, rgb(189, 1, 218) 100%);
@@ -114,6 +119,7 @@ body{
     background-origin: padding-box;
     font-size: 20pt;
     font-style: italic;
+    z-index: 2;
 }
 
 
@@ -126,6 +132,7 @@ a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
     left: 50%;
     height: 100%;
     pointer-events: none;   
+    z-index: 1;
 }
 
 .textbox{
@@ -160,6 +167,9 @@ a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
     overflow: auto;
     max-height: 100px;
     scrollbar-width: none;
+}
+#above{
+    background: linear-gradient(40deg,rgba(164, 189, 227, 1) 0%, rgba(100, 155, 227, 1) 49%, rgba(61, 122, 194, 1) 86%);
 }
 #bottom{
     color:white;
