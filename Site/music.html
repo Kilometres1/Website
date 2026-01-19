@@ -14,22 +14,28 @@
                 <a href="#albums">⌾ Albums</a>
                 <a href="#wrapped">⌾ By the Numbers</a>
             </div>
-            <div id="listeningto">
-                <div id="lastfm-widget">
-                    <div id="widget">&#127911; <span id="song">&#8987;</span></div>
-                    <div><p><small>powered by <a href="https://github.com/biancarosa/lastfm-last-played" target="_blank">@biancarosa/lastfm-last-played</a></small></p></div>
+            <div>
+                <img id="lastplayedart" src="">
+                <div id="listeningto">
+                    <div id="lastfm-widget">
+                        <div id="widget"><span id="song"></span></div>
+                        <div><p><small>powered by <a href="https://github.com/biancarosa/lastfm-last-played" target="_blank">@biancarosa/lastfm-last-played</a></small></p></div>
+                    </div>
+                    <script type="text/javascript">
+                        let user = 'kilometres__';
+                        let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
+                        let song = document.querySelector('#song');
+                        let art = document.querySelector('#art');
+                        fetch(url)
+                            .then(function (response) {
+                                return response.json()
+                            }).then(function (json) {
+                                song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
+                                document.getElementById("lastplayedart").src = json['track']['image']['2']['#text'];
+                            });
+                        
+                    </script>
                 </div>
-                <script type="text/javascript">
-                    let user = 'kilometres__';
-                    let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
-                    let song = document.querySelector('#song');
-                    fetch(url)
-                        .then(function (response) {
-                            return response.json()
-                        }).then(function (json) {
-                            song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
-                        });
-                </script>
             </div>
         </div>
         <div id="main">
@@ -42,7 +48,22 @@
                 </div>
                 <div><h3><i>2025</i></h3></div>
                 <div class="year">
-                    
+
+                    <div class="album">
+                        <div class="graphic">
+                            <img class="art" src="MusicResources/spyglass.jpg" alt="">
+                            <img class="disc" src="MusicResources/cd.png" alt="">
+                            <div class="spacing"></div>
+                        </div>
+                        <div class="text">
+                            <h4>Spyglass - Louie Zong</h4>
+                            <h3>★★★★☆</h3>
+                            <h5>Notes:</h5>
+                            <p>I don't think I want to rank this one, I like listening to it as one connected piece</p>
+
+                        </div>
+                    </div>
+
                     <div class="album">
                         <div class="graphic">
                             <img class="art" src="MusicResources/persona.jpg" alt="">
@@ -80,6 +101,26 @@
                             <p>LOVE THIS ALBUM!</p>
                             <p>Honestly my first proper go at listening to her work, having heard other one-off songs like "Antonymph" and "Lesbian Ponys With Weapons"</p>
                             <p>ALSO the <a href="https://static.wikitide.net/vyletponywiki/6/67/Love_%26_Ponystep_Lyrics_Booklet.pdf">lyrics/notes</a> booklet she released alongside the album is so cool!</p>
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <div class="graphic">
+                            <img class="art" src="MusicResources/cardiaccontrepoint.jpg" alt="">
+                            <img class="disc" src="MusicResources/cd.png" alt="">
+                            <div class="spacing"></div>
+                        </div>
+                        <div class="text">
+                            <h4>CARDIAC CONTREPOINT - FLAVOR FOLEY</h4>
+                            <h3>★★★★☆</h3>
+                            <h5>Favourite Songs:</h5>
+                            <ol>
+                                <li>weathergirl</li>
+                                <li>Water the Roses</li>
+                                <li>Queen of Venus</li>
+                            </ol>
+                            <h5>Notes:</h5>
+                            <p>FLAVOR FOLEY MY BELOVED</p>
                         </div>
                     </div>
 

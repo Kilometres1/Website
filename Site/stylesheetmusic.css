@@ -45,7 +45,11 @@ body{
     height: fit-content;
     
 }
-#header > div{
+#header div{
+    display: flex;
+    flex-direction: column;
+}
+#listeningto{
     display: flex;
     flex-direction: column;
 }
@@ -60,6 +64,16 @@ h3,h2{
 h5, ol{
     font-family: Atkinson;
 }
+
+#header div + div{
+    display: flex;
+    flex-direction: row;
+}
+#lastplayedart{
+    height: 65;
+    margin-right: 20px;
+}
+
 
 /*THE SECTION FOR THE ALBUMS*/
 

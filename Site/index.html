@@ -3,7 +3,8 @@
         <link rel="stylesheet" href="https://unpkg.com/98.css" />
         <link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
         <link rel="icon" type="image/png" href="IndexResources/icon.png">
-        <title>Home &lt;3</title>
+        <script type="text/javascript" src="IndexResources/dom-drag.js"></script>
+        <title>Kilometres &lt;3</title>
         <meta charset="UTF-8">
     </head>
     <style>
@@ -51,7 +52,48 @@
             </div>
         </div>
         <div id="below">
-
+            <script>
+                
+                /***********************************************
+                 * Drag and Drop Script: (c) Dynamic Drive (http://www.dynamicdrive.com)
+                 * Please keep this notice intact
+                 * Visit http://www.dynamicdrive.com/ for this script and 100s more.
+                 ***********************************************/
+                
+                var dragobject={
+                    z: 0, x: 0, y: 0, offsetx : null, offsety : null, targetobj : null, dragapproved : 0,
+                    initialize:function(){
+                        document.onmousedown=this.drag
+                        document.onmouseup=function(){this.dragapproved=0}
+                    },
+                    drag:function(e){
+                        var evtobj=window.event? window.event : e
+                        this.targetobj=window.event? event.srcElement : e.target
+                        if (this.targetobj.id=="drag"){
+                            this.dragapproved=1
+                            if (isNaN(parseInt(this.targetobj.style.left))){this.targetobj.style.left=0}
+                            if (isNaN(parseInt(this.targetobj.style.top))){this.targetobj.style.top=0}
+                            this.offsetx=parseInt(this.targetobj.style.left)
+                            this.offsety=parseInt(this.targetobj.style.top)
+                            this.x=evtobj.clientX
+                            this.y=evtobj.clientY
+                            if (evtobj.preventDefault)
+                                evtobj.preventDefault()
+                                document.onmousemove=dragobject.moveit
+                        }
+                    },
+                    moveit:function(e){
+                        var evtobj=window.event? window.event : e
+                        if (this.dragapproved==1){
+                                this.targetobj.style.left=this.offsetx+evtobj.clientX-this.x+"px"
+                                this.targetobj.style.top=this.offsety+evtobj.clientY-this.y+"px"
+                                return false
+                        }
+                    }
+                }
+        
+                dragobject.initialize()
+            </script>
             <div id="navbar" class="title-bar">
                 <div class="title-bar-text">Extras!</div>
                 <div class="title-bar-controls">
@@ -61,78 +103,114 @@
                 </div>
             </div>
 
-            <div class="window" style="width: fit-content; position: relative; left: 5%;top: 5%;">
-                <div class="title-bar">
-                    <div class="title-bar-text">Sites that inspired this one!</div>
-                    <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
+            <div style="width: fit-content; position: relative; left: 5%; top: 5%;">
+                <div id="root" class="window" style="position: relative; left: 0; top: 0;">
+                    <div id="handle" class="title-bar">
+                        <div class="title-bar-text">Sites I like!</div>
+                        <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
                     </div>
-                </div>
-                <div class="window-body">
-                    <div style="display: flex; flex-direction: row; justify-content: space-around;">
-                        <a href="https://olliveen.neocities.org/" target="_blank"><img src="https://olliveen.neocities.org/img/button.gif"></a>
-                        <div style="width: 83px; height: 31px;"><a href="https://juneish.neocities.org" style="position: relative; top: 9;left: 18;">[Juneish]</a></div>
-                        <a href="https://forestfolke.neocities.org/"><img src="IndexResources/forestfolke.gif"></a>
-                        <a href="https://altalenae.neocities.org/"><img src="IndexResources/altalenae.png" alt=""></a>
-                        <a href="https://bridget.party/home"><img src="IndexResources/bridget.gif" alt=""></a>
+                    <div class="window-body">
+                        <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                            <a href="https://olliveen.neocities.org/" target="_blank"><img src="https://olliveen.neocities.org/img/button.gif"></a>
+                            <div style="width: 83px; height: 31px;"><a href="https://juneish.neocities.org" style="position: relative; top: 9;left: 18;">[Juneish]</a></div>
+                            <a href="https://forestfolke.neocities.org/"><img src="IndexResources/forestfolke.gif"></a>
+                            <a href="https://altalenae.neocities.org/"><img src="IndexResources/altalenae.png" alt=""></a>
+                            <a href="https://bridget.party"><img src="IndexResources/bridget.gif" alt=""></a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="window" style="width: 300px; position: relative;left: 15%;top: 10%;">
-                <div class="title-bar">
-                    <div class="title-bar-text">Clown Tools</div>
-                    <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
-                    </div>
-                </div>
-                <div class="window-body">
-                    <img src="IndexResources/clowntools.jpg" alt="" style="width: 100%;">
                 </div>
             </div>
 
-            <div class="window" style="width: fit-content; position: absolute; right: 1%;top: 105%;">
-                <div class="title-bar">
-                    <div class="title-bar-text">Site Map</div>
-                    <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
+            <div style="width: 300px; position: relative; left: 10%; top: 10%;">
+                <div id="root1" class="window" style="position: relative; left: 0; top: 0;">
+                    <div id="handle1" class="title-bar">
+                        <div class="title-bar-text">Clown Tools</div>
+                        <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
+                    </div>
+                    <div class="window-body">
+                        <img src="IndexResources/clowntools.jpg" alt="" style="width: 100%;">
                     </div>
                 </div>
-                <div class="window-body">
-                    <ul class="tree-view">
-                        <li>Index ↤ <i>You Are Here!</i></li>
-                        <ul>
-                            <details close>
-                                <summary><a href="music.html">music</a></summary>
-                                <ul>
-                                    <li><a href="music.html#albums">albums</a></li>
-                                    <li><a href="music.html#wrapped">year-by-year</a></li>
-                                </ul>
-                            </details>
-                            <li><a href="ublog.html">μblog</a></li>
-                            <li><s>blog</s></li>
-                            <li><a href="computers.html">computers</a></li>
+            </div>
+
+            <div style=" position: absolute; left:85%;top: 110%;">
+                <div id="root2" class="window" style="width: 170px; position: relative; right: 0; top: 0;">
+                    <div id="handle2" class="title-bar">
+                        <div class="title-bar-text">Site Map</div>
+                        <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
+                    </div>
+                    <div class="window-body">
+                        <ul class="tree-view">
+                            <li>This Website!</li>
+                            <ul>
+                                <li>Index<i style="color: #a60f0f;">↤ You Are Here</i></li>
+                                <details close>
+                                    <summary><a href="music.html">music</a></summary>
+                                    <ul>
+                                        <li><a href="music.html#albums">albums</a></li>
+                                        <li><a href="music.html#wrapped">year-by-year</a></li>
+                                    </ul>
+                                </details>
+                                <li><a href="ublog.html">μblog</a></li>
+                                <li><s>blog</s></li>
+                                <li><a href="computers.html">computers</a></li>
+                            </ul>
                         </ul>
-                    </ul>
+                    </div>
                 </div>
             </div>
+            <div style="width: max-content; position: relative;left: 50%;top: 0%;transform: translate(-50%,-50%);">
+                <div id="root3" class="window" style="position: relative;left: 0;top: 0;">
+                    <div id="handle3" class="title-bar">
+                        <div class="title-bar-text">Me</div>
+                        <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
+                    </div>
+                    <div class="window-body" style="height: 400px;">
+                        <img src="IndexResources/me.png" alt="" style="height: 100%;">
+                    </div>
+                </div>                
+            </div>
 
+            <div style="width: max-content; position: relative;left: 75%;top: -50%;">
+                <div id="root4" class="window" style="position: relative;left: 0;top: 0;">
+                    <div id="handle4" class="title-bar">
+                        <div class="title-bar-text">Posters</div>
+                        <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
+                    </div>
+                    <div id="posters" class="window-body">
+                        <img src="IndexResources/lookback.jpg" alt="">
+                        <img src="IndexResources/lookback_poster_cn.jpg" alt="">
+                        <img src="IndexResources/across_the_spider-verse.jpg" alt="">
+                        <img src="IndexResources/across_the_spider-versecn.webp" alt="">
+                    </div>
+                </div>                
+            </div>
+
+            <script type="text/javascript">
+                var theHandle = document.getElementById("handle");
+                var theRoot = document.getElementById("root");
+                Drag.init(theHandle, theRoot);
+                var theHandle = document.getElementById("handle1");
+                var theRoot = document.getElementById("root1");
+                Drag.init(theHandle, theRoot);
+                var theHandle = document.getElementById("handle2");
+                var theRoot = document.getElementById("root2");
+                Drag.init(theHandle, theRoot);
+                var theHandle = document.getElementById("handle3");
+                var theRoot = document.getElementById("root3");
+                Drag.init(theHandle, theRoot);
+                var theHandle = document.getElementById("handle4");
+                var theRoot = document.getElementById("root4");
+                Drag.init(theHandle, theRoot);
+                var theHandle = document.getElementById("handle5");
+                var theRoot = document.getElementById("root5");
+                Drag.init(theHandle, theRoot);
+            </script>
         </div>
         <div id="bottom">
             <div>
-                
                 <p>Designed for 16:9 • Made with love in 2025 </p>
             </div>
         </div>
     </body>
 </html>
-
-
-
-
