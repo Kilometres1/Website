@@ -101,6 +101,21 @@
     #links{
         width: 75%;
     }
+    .offset{
+        transform: translate(-50%,-50%);
+    }
+    #posters{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 150px;
+    overflow-x: scroll;
+    }
+    #posters img{
+        height: 200px;
+        padding-right: 5px;
+    }
     
     /*#links div{
         border-left: #b1dfff dashed;
@@ -187,15 +202,4 @@ a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
     width: fit-content;
     display: block;
     margin: auto;
-}
-#posters{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 250px;
-}
-#posters img{
-    height: 150px;
-    padding: 5px;
 }

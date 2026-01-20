@@ -133,33 +133,7 @@
                 </div>
             </div>
 
-            <div style=" position: absolute; left:85%;top: 110%;">
-                <div id="root2" class="window" style="width: 170px; position: relative; right: 0; top: 0;">
-                    <div id="handle2" class="title-bar">
-                        <div class="title-bar-text">Site Map</div>
-                        <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
-                    </div>
-                    <div class="window-body">
-                        <ul class="tree-view">
-                            <li>This Website!</li>
-                            <ul>
-                                <li>Index<i style="color: #a60f0f;">↤ You Are Here</i></li>
-                                <details close>
-                                    <summary><a href="music.html">music</a></summary>
-                                    <ul>
-                                        <li><a href="music.html#albums">albums</a></li>
-                                        <li><a href="music.html#wrapped">year-by-year</a></li>
-                                    </ul>
-                                </details>
-                                <li><a href="ublog.html">μblog</a></li>
-                                <li><s>blog</s></li>
-                                <li><a href="computers.html">computers</a></li>
-                            </ul>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div style="width: max-content; position: relative;left: 50%;top: 0%;transform: translate(-50%,-50%);">
+            <div class="offset" style="width: max-content; position: relative;left: 50%;top: 0%;">
                 <div id="root3" class="window" style="position: relative;left: 0;top: 0;">
                     <div id="handle3" class="title-bar">
                         <div class="title-bar-text">Me</div>
@@ -171,21 +145,51 @@
                 </div>                
             </div>
 
-            <div style="width: max-content; position: relative;left: 75%;top: -50%;">
-                <div id="root4" class="window" style="position: relative;left: 0;top: 0;">
-                    <div id="handle4" class="title-bar">
-                        <div class="title-bar-text">Posters</div>
-                        <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
-                    </div>
-                    <div id="posters" class="window-body">
-                        <img src="IndexResources/lookback.jpg" alt="">
-                        <img src="IndexResources/lookback_poster_cn.jpg" alt="">
-                        <img src="IndexResources/across_the_spider-verse.jpg" alt="">
-                        <img src="IndexResources/across_the_spider-versecn.webp" alt="">
-                    </div>
-                </div>                
-            </div>
+            
+            <div style="position: absolute; right: 25px;top: 105vh;">
 
+                <div style=" position: relative; left:0%;top: 0%;">
+                    <div id="root2" class="window" style="width: 170px; position: relative; left: 0; top: 0;">
+                        <div id="handle2" class="title-bar">
+                            <div class="title-bar-text">Site Map</div>
+                            <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
+                        </div>
+                        <div class="window-body">
+                            <ul class="tree-view">
+                                <li>This Website!</li>
+                                <ul>
+                                    <li>Index<i style="color: #a60f0f;">↤ You Are Here</i></li>
+                                    <details close>
+                                        <summary><a href="music.html">music</a></summary>
+                                        <ul>
+                                            <li><a href="music.html#albums">albums</a></li>
+                                            <li><a href="music.html#wrapped">year-by-year</a></li>
+                                        </ul>
+                                    </details>
+                                    <li><a href="ublog.html">μblog</a></li>
+                                    <li><s>blog</s></li>
+                                    <li><a href="computers.html">computers</a></li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: max-content; position: relative;left: 0%;top: 0%; margin-left:auto; margin-top: 20px;">
+                    <div id="root4" class="window" style="position: relative;left: 0;top: 0;">
+                        <div id="handle4" class="title-bar">
+                            <div class="title-bar-text">Posters</div>
+                            <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
+                        </div>
+                        <div id="posters" class="window-body">
+                            <img src="IndexResources/lookback_poster_cn.jpg" alt="">
+                            <img src="IndexResources/lookback.jpg" alt="">
+                            <img src="IndexResources/across_the_spider-verse.jpg" alt="">
+                            <img src="IndexResources/across_the_spider-versecn.webp" alt="">
+                        </div>
+                    </div>                
+                </div>
+            </div>
             <script type="text/javascript">
                 var theHandle = document.getElementById("handle");
                 var theRoot = document.getElementById("root");
@@ -201,9 +205,6 @@
                 Drag.init(theHandle, theRoot);
                 var theHandle = document.getElementById("handle4");
                 var theRoot = document.getElementById("root4");
-                Drag.init(theHandle, theRoot);
-                var theHandle = document.getElementById("handle5");
-                var theRoot = document.getElementById("root5");
                 Drag.init(theHandle, theRoot);
             </script>
         </div>
