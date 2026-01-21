@@ -69,6 +69,9 @@
         top: 50%;
 
     }
+    .window{
+        z-index: 2;
+    }
     #header{
         position: static;
     }
@@ -80,9 +83,11 @@
     }
     #above{
         height: 100vh;
+        
     }
     #below{
-        
+        background: url(IndexResources/backgroundcrop.jpg) no-repeat fixed center;
+        background-size: cover;
         height: 100vh;
         background-color: #0a0a0a;
     }
@@ -90,9 +95,8 @@
         box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
         background-image: linear-gradient(90deg,navy,#1084d0);
         padding: 3px 2px 3px 3px;
-    }
-    #navbar-text{
-        color: white;
+        position: relative;
+        z-index: 1;
     }
     #bottom{
         bottom: -100%;
@@ -103,6 +107,19 @@
     }
     .offset{
         transform: translate(-50%,-50%);
+    }
+    #buttons{
+        max-width: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+    #buttons a{
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px;
     }
     #posters{
     display: flex;
@@ -115,6 +132,15 @@
     #posters img{
         height: 200px;
         padding-right: 5px;
+    }
+    #nine{
+        position: fixed;
+        left: 80%;
+        top:20%;
+        z-index: 0;
+    }
+    #nine img:hover{
+        transform: rotate(15deg);
     }
     
     /*#links div{
@@ -140,7 +166,8 @@ body{
     background-origin: padding-box;
     font-size: 20pt;
     font-style: italic;
-    z-index: 2;
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -153,7 +180,7 @@ a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
     left: 50%;
     height: 100%;
     pointer-events: none;   
-    z-index: 1;
+    z-index: 2;
 }
 
 .textbox{
@@ -162,9 +189,11 @@ a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
     border: 0cap;
     border-color:#cf5797;
     border-style: solid;
+    z-index: 1;
 }
 
 #links{
+    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -190,6 +219,7 @@ a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
     scrollbar-width: none;
 }
 #above{
+    z-index: 1;
     background: linear-gradient(40deg,rgba(164, 189, 227, 1) 0%, rgba(100, 155, 227, 1) 49%, rgba(61, 122, 194, 1) 86%);
 }
 #bottom{

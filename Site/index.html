@@ -12,6 +12,7 @@
     </style>
     <body>
         <div id="above">
+            <div style="position: absolute;width: 100%; height: 100vh; z-index: 1; background: linear-gradient(40deg,rgba(164, 189, 227, 1) 0%, rgba(100, 155, 227, 1) 49%, rgba(61, 122, 194, 1) 86%);"></div>
             <img id="radio" src="IndexResources/radiotrans.png" alt="">
             <div id="header"><a class="header" href="https://juneish.neocities.org/">heavily inspired by Juneish</a></div>
             <div class="textBox">
@@ -102,38 +103,44 @@
                     <button aria-label="Close"></button>
                 </div>
             </div>
-
-            <div style="width: fit-content; position: relative; left: 5%; top: 5%;">
-                <div id="root" class="window" style="position: relative; left: 0; top: 0;">
-                    <div id="handle" class="title-bar">
-                        <div class="title-bar-text">Sites I like!</div>
-                        <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
-                    </div>
-                    <div class="window-body">
-                        <div style="display: flex; flex-direction: row; justify-content: space-around;">
-                            <a href="https://olliveen.neocities.org/" target="_blank"><img src="https://olliveen.neocities.org/img/button.gif"></a>
-                            <div style="width: 83px; height: 31px;"><a href="https://juneish.neocities.org" style="position: relative; top: 9;left: 18;">[Juneish]</a></div>
-                            <a href="https://forestfolke.neocities.org/"><img src="IndexResources/forestfolke.gif"></a>
-                            <a href="https://altalenae.neocities.org/"><img src="IndexResources/altalenae.png" alt=""></a>
-                            <a href="https://bridget.party"><img src="IndexResources/bridget.gif" alt=""></a>
+            <div style="position: absolute; left: 25px;top: 105vh;">
+                <div style="width: fit-content; position: relative; left: 0%; top: 0%;">
+                    <div id="root" class="window" style="position: relative; left: 0; top: 0;">
+                        <div id="handle" class="title-bar">
+                            <div class="title-bar-text">Sites I like!</div>
+                            <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
+                        </div>
+                        <div class="window-body">
+                            <div id="buttons" style="">
+                                <a href="https://olliveen.neocities.org/" target="_blank"><img src="https://olliveen.neocities.org/img/button.gif"></a>
+                                <div style="width: 83px; height: 31px;"><a href="https://juneish.neocities.org" style="position: relative; top: 9;left: 18;">[Juneish]</a></div>
+                                <a href="https://forestfolke.neocities.org/"><img src="IndexResources/forestfolke.gif"></a>
+                                <a href="https://altalenae.neocities.org/"><img src="IndexResources/altalenae.png" alt=""></a>
+                                <a href="https://bridget.party"><img src="IndexResources/bridget.gif" alt=""></a>
+                                <a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/assets/img/linkback.gif" alt="petrapixel"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                <div style="width: 300px; position: relative; left: 0%; top: 0%;margin-top: 20px;">
+                    <div id="root1" class="window" style="position: relative; left: 0; top: 0;">
+                        <div id="handle1" class="title-bar">
+                            <div class="title-bar-text">Clown Tools</div>
+                            <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
+                        </div>
+                        <div class="window-body">
+                            <img src="IndexResources/clowntools.jpg" alt="" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>                
+
             </div>
 
-            <div style="width: 300px; position: relative; left: 10%; top: 10%;">
-                <div id="root1" class="window" style="position: relative; left: 0; top: 0;">
-                    <div id="handle1" class="title-bar">
-                        <div class="title-bar-text">Clown Tools</div>
-                        <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
-                    </div>
-                    <div class="window-body">
-                        <img src="IndexResources/clowntools.jpg" alt="" style="width: 100%;">
-                    </div>
-                </div>
-            </div>
 
-            <div class="offset" style="width: max-content; position: relative;left: 50%;top: 0%;">
+
+
+            <div class="offset" style="width: max-content; position: relative;left: 50%;top: 50%;">
                 <div id="root3" class="window" style="position: relative;left: 0;top: 0;">
                     <div id="handle3" class="title-bar">
                         <div class="title-bar-text">Me</div>
@@ -190,6 +197,7 @@
                     </div>                
                 </div>
             </div>
+            <a id="nine" href="https://www.sbnation.com/a/17776-football"><img  src="IndexResources/nine.png" alt="" style="width: 100px; "></a>
             <script type="text/javascript">
                 var theHandle = document.getElementById("handle");
                 var theRoot = document.getElementById("root");
