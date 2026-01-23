@@ -108,6 +108,10 @@
     .offset{
         transform: translate(-50%,-50%);
     }
+    .sidebar{
+        > div{margin-bottom: 30px;}
+    }
+
     #buttons{
         max-width: 300px;
         display: flex;
@@ -133,10 +137,39 @@
         height: 200px;
         padding-right: 5px;
     }
+    #tentext{
+        z-index: 0;
+        position: fixed;
+        right: 20%;
+        top: 5%;
+        background-color: white;
+        color: green;
+        font-weight: 800;
+        width: 240px;
+        :link {color: green;}
+        :hover {color: green;}
+        :visited {color: green;}
+        a {text-decoration: none;}
+        p{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        p:hover+img{
+            transform: rotate(15deg);
+        }
+    }
+    .flash{
+        animation: flashAnim 2s step-start infinite;
+    }
+    @keyframes flashAnim {
+        50% {
+            opacity: 0;
+        }
+    }
     #nine{
         position: fixed;
-        left: 80%;
-        top:20%;
+        right: 20%;
+        top:5%;
         z-index: 0;
     }
     #nine img:hover{
@@ -146,6 +179,9 @@
     /*#links div{
         border-left: #b1dfff dashed;
     }*/
+}
+html{
+    scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
   display: none;
