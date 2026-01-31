@@ -11,32 +11,10 @@
         <div id="header">
             <div>
                 <a href="index.html">⬑ Return</a>
-                <a href="#albums">⏯ Recent</a>
-                <a href="#wrapped">🎞 Ratings</a>
+                <a href="#albums">🎞 Recent</a>
+                <a href="#wrapped">★ Ratings</a>
             </div>
-            <div>
-                <img id="lastplayedart" src="">
-                <div id="listeningto">
-                    <div id="lastfm-widget">
-                        <div id="widget"><span id="song"></span></div>
-                        <div><p><small>powered by <a href="https://github.com/biancarosa/lastfm-last-played" target="_blank">@biancarosa/lastfm-last-played</a></small></p></div>
-                    </div>
-                    <script type="text/javascript">
-                        let user = 'kilometres__';
-                        let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
-                        let song = document.querySelector('#song');
-                        let art = document.querySelector('#art');
-                        fetch(url)
-                            .then(function (response) {
-                                return response.json()
-                            }).then(function (json) {
-                                song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
-                                document.getElementById("lastplayedart").src = json['track']['image']['2']['#text'];
-                            });
-                        
-                    </script>
-                </div>
-            </div>
+
         </div>
         <div id="main">
             <div><h2><i>Recently Watched</i></h2></div>

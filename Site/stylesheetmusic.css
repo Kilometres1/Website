@@ -26,6 +26,7 @@
 html{
     font-family: Nunito;
     background-image: linear-gradient(#00c8ff,#00e08a);
+    scroll-behavior: smooth;
 }
 body{
     margin: 0;
@@ -48,6 +49,10 @@ body{
 #header div{
     display: flex;
     flex-direction: column;
+}
+
+#listeningwidget{
+    max-height: 70px;
 }
 #listeningto{
     display: flex;
