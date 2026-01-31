@@ -64,6 +64,7 @@
     .textbox {
         position: absolute;
         width:fit-content;
+        max-width: 400px;
         transform: translate3d(-50%,-50%,0px) scale(120%);
         left: 50%;
         top: 50%;
