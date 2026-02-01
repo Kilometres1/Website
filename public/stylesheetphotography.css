@@ -1,0 +1,221 @@
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-Regular.ttf);
+}
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-Italic.ttf);
+    font-style: italic;
+}
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-Italic.ttf);
+    font-style: italic;
+}
+html{
+    font-family: Nunito;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+#main{
+    margin: 10px;
+}
+#header{
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    background-color: #272a34;
+    font-family: Atkinson;
+    font-style: normal;
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+    
+}
+#leftheader{
+    display: flex;
+    flex-direction: column;
+    h1{
+        margin: 0;
+        margin-bottom: -37;
+        font-size: 100;
+    }
+}
+
+#listeningwidget{
+    max-height: 70px;
+}
+#listeningto{
+    display: flex;
+    flex-direction: column;
+}
+#header a{
+    color: #00c8ff;
+    text-decoration: none;
+}
+h3,h2{
+    text-decoration: overline;
+    font-family: Atkinson;
+}
+h5, ol{
+    font-family: Atkinson;
+}
+
+#rightheader div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 200px;
+    *{
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+    }
+}
+
+/*THE SECTION FOR THE BODY*/
+
+
+body{
+    margin: 0;
+    color: white;
+
+}
+#main{
+    display: flex;
+    flex-direction: row;
+}
+#left{
+    scroll-behavior: smooth;
+    z-index: 1;
+    overflow: auto;
+    scrollbar-width: none;
+    height: 80vh;
+    border-right: white dashed;
+}
+.imagecollection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.imagecollection img{
+    padding: 10px;
+    height: 200px;
+}
+.captionedimage {
+  position: relative;
+  img{
+    transition: .5s ease
+  }
+}
+.captionedimage:hover img {
+  opacity: 0.3;
+}
+
+.captionedimage:hover .caption {
+  opacity: 1;
+}
+.caption {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  width: 75%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text {
+  color: white;
+  font-size: 16px;
+  padding: 5px;
+}
+#right{
+    position: sticky;
+    width: 45%;
+    padding-left: 10px;
+}
+#facts{
+    position: fixed;
+    z-index: 2;
+}
+#fact{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    opacity: 1;
+    transition: .5s ease;
+}
+#facts:hover #fact{
+    opacity: 0;
+}
+#facts:hover #facter{
+    opacity: 1;
+}
+#facter{
+    transition: .5s ease;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text{
+    overflow:auto;
+    position: relative;
+    color: white;
+    scrollbar-width: none;
+}
+.text > h4{
+    margin-top: 0;
+}
+.text > h5,li,p{
+    color: rgb(159, 159, 159);
+}
+.text h3{
+    color: #00e08a;
+}
+#albums a{
+    color: #00c8ff;
+}
+
+
+
+
+
+
+/*THE SECTION FOR THE WRAPPED*/
+
+
+#wrapped img{
+    width: 200px;
+}
