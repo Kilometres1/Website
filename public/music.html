@@ -14,27 +14,28 @@
                 <a href="#albums">⌾ Albums</a>
                 <a href="#wrapped">⌾ By the Numbers</a>
             </div>
+            <div style="transform: translateY(20px);"><h1 style="font-size: 100;margin: -40;">Music</h1></div>
+            <div style="width: 200px;"></div>
             <div id="listeningwidget">
                 <iframe src="https://petrapixel.neocities.org/widgets/lastfm?center=1&font-family=Arial&font-size=0px&color=white&username=kilometres__&delimiter=-&underline=0&showAlbumCover=70" frameborder="0" title="Last.Fm Status" style="width: 90px;"></iframe>
-                <div id="listeningto">
-                    <div id="lastfm-widget">
-                        <iframe src="https://petrapixel.neocities.org/widgets/lastfm?center=1&font-family=Arial&font-size=16px&color=white&username=kilometres__&delimiter=-&underline=0" frameborder="0" title="Last.Fm Status" style="width: 250px;height: 40px;"></iframe>
-                        <div><p><small>powered by <a href="https://github.com/biancarosa/lastfm-last-played" target="_blank">@biancarosa/lastfm-last-played</a></small></p></div>
-                    </div>
-                    <script type="text/javascript">
-                        let user = 'kilometres__';
-                        let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
-                        let song = document.querySelector('#song');
-                        let art = document.querySelector('#art');
-                        fetch(url)
-                            .then(function (response) {
-                                return response.json()
-                            }).then(function (json) {
-                                song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
-                                document.getElementById("lastplayedart").src = json['track']['image']['2']['#text'];
-                            });
-                        
-                    </script>
+                <div id="lastfm-widget">
+                    <iframe src="https://petrapixel.neocities.org/widgets/lastfm?center=1&font-family=Arial&font-size=16px&color=white&username=kilometres__&delimiter=-&underline=0" frameborder="0" title="Last.Fm Status" style="width: 250px;max-height: 55px;"></iframe>
+                    <div><p style="margin: 0;"><small>powered by <a href="https://github.com/biancarosa/lastfm-last-played" target="_blank">@biancarosa/lastfm-last-played</a></small></p></div>
+                </div>
+                <script type="text/javascript">
+                    let user = 'kilometres__';
+                    let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
+                    let song = document.querySelector('#song');
+                    let art = document.querySelector('#art');
+                    fetch(url)
+                        .then(function (response) {
+                            return response.json()
+                        }).then(function (json) {
+                            song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
+                            document.getElementById("lastplayedart").src = json['track']['image']['2']['#text'];
+                        });
+                    
+                </script>
                 </div>
             </div>
         </div>
@@ -263,9 +264,9 @@
                             <h3>★★★★☆</h3>
                             <h5>Favourite Songs:</h5>
                             <ol>
-                                <li></li>
-                                <li></li>
+                                <li>Ruler of Everything</li>
                                 <li>The Whole World and You</li>
+                                <li>Haiku</li>
                             </ol>
                             <h5>Notes:</h5>
                             <p>yayy tally hall yayy!</p>
@@ -299,6 +300,24 @@
                         <div class="graphic">
                             <img class="art" src="MusicResources/razzmatazz.jpg" alt="">
                             <img class="disc" src="MusicResources/razzmatazzdisc.png" alt="">
+                            <div class="spacing"></div>
+                        </div>
+                        <div class="text">
+                            <h4>RAZZMATAZZ - IDKHOW</h4>
+                            <h3>★★★★☆</h3>
+                            <h5>Favourite Songs:</h5>
+                            <ol>
+                                <li>Clusterhug</li>
+                                <li>Door</li>
+                                <li>Need You Here</li>
+                            </ol>
+                        </div>                
+                    </div>
+
+                    <div class="album">
+                        <div class="graphic">
+                            <img class="art" src="MusicResources/1981ep.png" alt="">
+                            <img class="disc" src="MusicResources/1981epdisc.png" alt="">
                             <div class="spacing"></div>
                         </div>
                         <div class="text">

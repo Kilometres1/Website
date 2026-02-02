@@ -54,9 +54,10 @@ body{
 #listeningwidget{
     max-height: 70px;
 }
-#listeningto{
+#lastfmwidget{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 #header a{
     color: #00c8ff;
