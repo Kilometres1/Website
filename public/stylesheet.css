@@ -113,6 +113,12 @@
         > div{margin-bottom: 30px;}
     }
 
+    #rightsidebar{
+        align-items: end;
+        display: flex;
+        flex-direction: column;
+    }
+
     #buttons{
         max-width: 300px;
         display: flex;
@@ -126,17 +132,10 @@
         padding-right: 5px;
         padding-bottom: 5px;
     }
-    #posters{
+    #webrings{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    max-width: 150px;
-    overflow-x: scroll;
-    }
-    #posters img{
-        height: 200px;
-        padding-right: 5px;
+    flex-direction: column;
+    max-width: 250px;
     }
     #tentext{
         z-index: 0;
