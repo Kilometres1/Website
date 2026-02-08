@@ -56,14 +56,7 @@ html{
     }
 }
 
-#listeningwidget{
-    max-height: 70px;
-}
-#listeningto{
-    display: flex;
-    flex-direction: column;
-}
-#header a{
+a{
     color: #00c8ff;
     text-decoration: none;
 }
@@ -147,8 +140,44 @@ body{
 #right{
     position: sticky;
     width: 45%;
+    height: 70vh;
+    min-width: 250px;
+    overflow: auto;
     padding-left: 10px;
 }
+
+#phonegif{
+    
+    div{
+        opacity: 1;
+        transition: 0.5s, fade;
+        z-index: 2;
+        width: 218px;
+        height: 355px;
+        position: absolute;
+        background-color: #383838;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        p{
+            display: block;
+            margin: auto;
+        }
+    }
+    div:hover{
+        opacity: 0;
+    }
+
+    img{
+        z-index: 1;
+    }
+}
+
+
+
+
+
+
 #facts{
     position: fixed;
     z-index: 2;
