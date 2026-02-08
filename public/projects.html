@@ -12,11 +12,41 @@
         <div id="Tamagotchi">
             <h2>Tamagotchi <a href="https://github.com/Kilometres1/Projects/tree/main/DIY%20Miku%20Tamagotchi"><i>Files</i></a></h2>
             <div>
-                <img src="projectResources/tamagotchiedit.gif" alt="">
-                <img src="projectResources/tama.jpg" alt="">
+                <img src="projectResources/tamagotchi/tamagotchiedit.gif" alt="">
+                <img src="projectResources/tamagotchi/tama.jpg" alt="">
             </div>
             <p>This is a tamagotchi knock-off I made using an ATTiny85 and an (oversized) LiPo battery!</p>
             <p>If you checked in on a few times a day, the battery should last upwards of a year, although the screen will turn off if you leave it, otherwise the OLED will burn out eventually.</p>
+            
+        </div>
+        <div id="rotator">
+            <h2>Satellite Dish Rotator [Work in Progress] <a href="#"><i>Files</i></a></h2>
+            <p>This is a rotator for a satellite dish I'm using to receive weather satellite imagery (<a href="ublogResources/2025/meteormn2-3-20251228.png">example</a>). A dish isn't necessary for low resolution images, but the higher quality images are transmitted at much higher frequencies that require a dish to pick up.</p>
+            <p>This design is based on the <a href="https://wiki.satnogs.org/SatNOGS_Rotator_v3">SatNOGS Rotator v3</a>, with some modifications here and there, and using custom code.</p>
+            <h3>Hardware</h3>
+            <p>The design is made of two cuboid frames made from aluminium extrusion connected with 3D printed L brackets for initial fit, and then secured with metal ones and T-slot nuts and bolts. The two cuboids each house a 40mm diameter aluminium tube, each of which is rotated by a stepper motor via a worm gear. Side Note: All 3D printed parts in this project are made with PETG. This is because it is much stronger than PLA, and it's all I had at the time.</p>
+            <div class="imageCollection">
+                <img src="projectResources/rotator/box.jpg" alt="">
+                <img src="projectResources/rotator/L bracket.png" alt="">
+            </div>
+            <p class="caption">Left: One of the aluminium cuboids, with a worm gear and one bracket for the aluminium tube. Right: A 3D model for the printed L brackets to hold the aluminium frame together. These are printed to be a friction fit.</p>
+            <p>This design does not have immediate feedback for dish azimuth and elevation, instead doing a homing sequence periodically and using a limit switch to mark a known point. The stepper motors move in very small steps, so these work well to calculate the azimuth and elevation as the dish moves from its 'home' position</p>
+            <p>The mechanism for connecting the dish to the aluminium arms hasn't been made yet, but it will be a slot cut through the diameter of each arm, that the dish mounts slide into. This will allow the dish-rotator and counter weight-rotator distances to be adjusted if the feed is changed, for example.</p>
+            <p>I have been testing this design with a solid dish, made from some sort of sheet steel. This dish will be replaced, as currently it is far to heavy to be moved about without the stepper motors stalling occasionally. The Summer 2026 plan is to make a 1-2m diameter mesh dish, which will be much lighter.</p>
+            <div class="imageCollection">
+                <img src="projectResources/rotator/nodish.jpg" alt="">
+                <img src="projectResources/rotator/testing.jpg" alt="">
+            </div>
+            <p class="caption">Left: The assembled rotator as of August 2025. Right: The rotator with the dish mounted. The dish is currently counter-weighted with two bricks, which is visibly bending the lever arm.</p>
+            <h3>Electronics</h3>
+            <p>The rotator moves using two 48mm long NEMA 17 <a href="https://www.aliexpress.com/item/1501443015.html?spm=a2g0o.order_list.order_list_main.32.576f1802pusiN6">stepper motors</a>, which in turn are powered using DRV8825 drivers. These are controlled with an Arduino Pro Mini that communicates to a computer running a rotctld instance to communicate between the Arduino and in this case SatDump.</p>
+            <p>The power for this is supplied by the USB connected to the Arduino for 5V, and a modified laptop charger for 24V for the motor drivers. As the drivers are turning with a very high torque, the drivers emit a large amount of heat. A 5v cooling fan has been attached to the exterior of the case to reduce the driver temperature.</p>
+            <div class="imageCollection">
+                <img src="projectResources/rotator/electronicsbox.png" alt="">
+            </div>
+            <p class="caption">Above: The box the electronics are stored in. The drivers are located in the smaller section in the right hand door, which will funnel air from the fan across the heatsinks.</p>
+            <h3>Code</h3>
+            <p>The code runs an implementation of the EASYCOMM II Standard (<a href="https://github.com/airween/hamlib_old/blob/master/easycomm/easycomm.txt">specification here</a>). I'll talk about it later as it isn't finalised yet.</p>
             
         </div>
     </body>

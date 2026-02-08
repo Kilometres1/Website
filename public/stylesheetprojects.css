@@ -32,3 +32,26 @@ i{
     font-size: small;
     
 }
+
+#rotator{
+    max-width: 900px;
+    img{
+        width: 500px;
+    }
+    .imageCollection{
+        background-color: #f2f2f2;
+        display: flex;
+        flex-direction: row;
+        img{
+            padding: 10px;
+            width: 100%;
+        }
+    }
+
+    .caption{
+        font-style: italic;
+        padding-left: 20px;
+        margin-top: 0;
+        background-color: #f2f2f2;
+    }
+}
