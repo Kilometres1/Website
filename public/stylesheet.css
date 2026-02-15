@@ -92,6 +92,9 @@
         height: 100vh;
         background-color: #0a0a0a;
     }
+    .window-body{
+        font-size: 14px;
+    }
     #navbar{
         box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
         background-image: linear-gradient(90deg,navy,#1084d0);
@@ -111,6 +114,25 @@
     }
     .sidebar{
         > div{margin-bottom: 30px;}
+    }
+
+    #leftsidebar{
+        display: flex;
+        flex-direction: row;
+        > div > div{
+            padding-bottom: 20px;
+        }
+    }
+    #leftsidebar-left{
+        padding-right: 20px;
+        align-items: end;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #leftsidebar-right{
+        display: flex;
+        flex-direction: column;
     }
 
     #rightsidebar{
