@@ -25,6 +25,11 @@
 html{
     font-family: Nunito;
 }
+body{
+    > div{
+        border-bottom: dashed;
+    }
+}
 a{
     text-decoration: none;
 }
