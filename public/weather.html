@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <link href="stylesheetweather.css" rel="stylesheet" type="text/css" media="all">
+        <title>Photography</title>
+        <meta charset="UTF-8">
+    </head>
+    <style>
+    </style>
+    <div id="header">
+        <div id="leftheader">
+            <a href="index.html">⬑ Return</a>
+            <h1>Weather</h1>
+        </div>
+        <div id="rightheader">
+            <h2>Work in progress!</h2>
+
+        </div>
+
+    </div>
+    <body>
+        <div id="main">
+            <div id="sidebar">
+                <div id="january">
+                    <h3>January</h3>
+                    <div>
+                        <h4>06 - 3:32 AM</h4>
+                        <img src="weatherResources/imagery/sample/221 false colour.jpg" alt="221 - A 'false colour' composite"  onclick="myFunction(this);">
+                        <img src="weatherResources/imagery/sample/3,9mm shortwave.jpg" alt="3.9mm shortwave"  onclick="myFunction(this);">
+                        <img src="weatherResources/imagery/sample/mcir.jpg" alt="MCIR"  onclick="myFunction(this);">
+                    </div>
+                    <div>
+                        <h4>06 - 8:58 AM</h4>
+                        <img src="weatherResources/imagery/sample/221 false colour.jpg" alt="221 - A 'false colour' composite"  onclick="myFunction(this);">
+                        <img src="weatherResources/imagery/sample/3,9mm shortwave.jpg" alt="3.9mm shortwave"  onclick="myFunction(this);">
+                        <img src="weatherResources/imagery/sample/mcir.jpg" alt="MCIR"  onclick="myFunction(this);">
+                    </div>
+                </div>
+            </div>
+            <div id="left">
+                <div id="imageviewer">
+                    <div id="mainimage">
+                        <img id="expandedImg">
+                        <div id="imgtext"></div>
+                    </div>
+                </div>
+                <script>
+                    function myFunction(imgs) {
+                    // Get the expanded image
+                    var expandImg = document.getElementById("expandedImg");
+                    // Get the image text
+                    var imgText = document.getElementById("imgtext");
+                    // Use the same src in the expanded image as the image being clicked on from the grid
+                    expandImg.src = imgs.src;
+                    // Use the value of the alt attribute of the clickable image as text inside the expanded image
+                    imgText.innerHTML = imgs.alt;
+                    // Show the container element (hidden with CSS)
+                    expandImg.parentElement.style.display = "block";
+                    } 
+                </script>
+            </div>
+
+            <div id="right">
+                <h2>What is this page?</h2>
+                <p>This page is <i>meant</i> to be a place to show images I have taken from weather satellites. There have been some... technical difficulties shall we say? When the dish rotator <a href="projects.html#rotator">is finished</a>, this will automatically display the images that have been downloaded, decoded, and cropped beforehand!</p>
+                <p>For now this page will show some old images from early january 2026, as a showcase of whats to come :)</p>
+                <p>and if Elektro L3 gets moved later this year, there will be some geostationary pictures too! </p>
+            </div>  
+        </div>
+    </body>
+</html>
