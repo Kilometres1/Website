@@ -99,6 +99,7 @@ body{
 #sidebar{
     font-family: Atkinson;
     min-width: 110px;
+    max-width: 200px;
     width: fit-content;
     border-right: dashed;
     padding-right: 15px;
@@ -109,20 +110,24 @@ body{
 
 #left{
     padding-left: 10px;
+    padding-right: 10px;
     scroll-behavior: smooth;
     z-index: 1;
     overflow: auto;
     scrollbar-width: none;
     height: 80vh;
-    width: 70%;
+    width: 1100px;
     border-right: white dashed;
 }
 
 #mainimage{
     border: dashed;
-    width: 500px;
-    height: 500px;
+    width: 700px;
+    height: 700px;
     display: flex;
+    img{
+        width: 100%;
+    }
 }
 #imgtext {
     position: relative;
@@ -179,10 +184,10 @@ body{
 }
 #right{
     position: sticky;
-    width: 45%;
     height: 70vh;
+    width: fit-content;
     min-width: 250px;
-    max-width: 40%;
+    max-width: 30%;
     overflow: auto;
     padding-left: 10px;
     padding-right: 10px;

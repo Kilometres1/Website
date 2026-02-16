@@ -1,7 +1,8 @@
 <html>
     <head>
         <link href="stylesheetweather.css" rel="stylesheet" type="text/css" media="all">
-        <title>Photography</title>
+        <title>Weather Satellites</title>
+        <link rel="icon" type="image/png" href="weatherResources/ico.jpg">
         <meta charset="UTF-8">
     </head>
     <style>
@@ -20,19 +21,26 @@
     <body>
         <div id="main">
             <div id="sidebar">
-                <div id="january">
-                    <h3>January</h3>
-                    <div>
-                        <h4>06 - 3:32 AM</h4>
+                <div id="february">
+                    <h3>February</h3>
+                                        <div>
+                        <h4>Sample</h4>
                         <img src="weatherResources/imagery/sample/221 false colour.jpg" alt="221 - A 'false colour' composite"  onclick="myFunction(this);">
                         <img src="weatherResources/imagery/sample/3,9mm shortwave.jpg" alt="3.9mm shortwave"  onclick="myFunction(this);">
                         <img src="weatherResources/imagery/sample/mcir.jpg" alt="MCIR"  onclick="myFunction(this);">
                     </div>
+                </div>
+                <div id="january">
+                    <h3>January</h3>
+
                     <div>
-                        <h4>06 - 8:58 AM</h4>
-                        <img src="weatherResources/imagery/sample/221 false colour.jpg" alt="221 - A 'false colour' composite"  onclick="myFunction(this);">
-                        <img src="weatherResources/imagery/sample/3,9mm shortwave.jpg" alt="3.9mm shortwave"  onclick="myFunction(this);">
-                        <img src="weatherResources/imagery/sample/mcir.jpg" alt="MCIR"  onclick="myFunction(this);">
+                        <h4>06</h4>
+                        <img src="weatherResources/imagery/2026-01-06/6.png" alt="20:31 - Channel 4"  onclick="myFunction(this);">
+                        <img src="weatherResources/imagery/2026-01-06/5.png" alt="14:47 - Channel 4"  onclick="myFunction(this);">
+                        <img src="weatherResources/imagery/2026-01-06/4.png" alt="13:07 - Channel 4"  onclick="myFunction(this);">
+                        <img src="weatherResources/imagery/2026-01-06/3.png" alt="10:43 - Channel 4"  onclick="myFunction(this);">
+                        <img src="weatherResources/imagery/2026-01-06/2.png" alt="09:02 - Channel 4"  onclick="myFunction(this);">
+                        <img src="weatherResources/imagery/2026-01-06/1.png" alt="03:19 - Channel 4"  onclick="myFunction(this);">
                     </div>
                 </div>
             </div>
@@ -60,10 +68,15 @@
             </div>
 
             <div id="right">
-                <h2>What is this page?</h2>
+                <h2>About the Page</h2>
                 <p>This page is <i>meant</i> to be a place to show images I have taken from weather satellites. There have been some... technical difficulties shall we say? When the dish rotator <a href="projects.html#rotator">is finished</a>, this will automatically display the images that have been downloaded, decoded, and cropped beforehand!</p>
                 <p>For now this page will show some old images from early january 2026, as a showcase of whats to come :)</p>
                 <p>and if Elektro L3 gets moved later this year, there will be some geostationary pictures too! </p>
+                <p>(a better explaination of everything can be found <a href="https://www.a-centauri.com/articoli/meteor-satellite-reception">here</a>)</p>
+                <h2>About the Images</h2>
+                <h3>Whats Channel 4?</h3>
+                <p>The METEOR Series of satellites transmit on six different channels. The LRPT Downlink (which this page's images were decoded from) sends down three of these. During the summer they send 1, 2, and 3, but during winter theres much less light over 24 hours, so channel 4 is sent instead of 3. I'm not going to pretend I know what channel 4 is, but it works at night so I'm happy. </p>
+            
             </div>  
         </div>
     </body>
