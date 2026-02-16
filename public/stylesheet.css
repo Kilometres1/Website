@@ -214,19 +214,6 @@ body{
     background: #000000;
     -ms-overflow-style: none;
 }
-#header{
-    margin: 0px 10px 10px 10px;
-    transform: translateY(10px);
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-image: linear-gradient(70deg, rgb(66, 101, 226) 0px, rgb(66, 101, 226) 55%, rgb(189, 1, 218) 100%);
-    background-size: auto;
-    background-origin: padding-box;
-    font-size: 20pt;
-    font-style: italic;
-    position: relative;
-    z-index: 1;
-}
 
 
 a.header:link {text-decoration:none;color: rgb(66, 101, 226);}
@@ -268,14 +255,18 @@ a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
 #updatesPane{
     display: flex;
     max-width: 280px;
+    div{
+        padding: 5px;
+        overflow: auto;
+        max-height: 100px;
+        scrollbar-width: none;    
+    }
+    a{
+        text-decoration: none;
+        color: #222;
+    }
+}
 
-}
-#updatesPane div{
-    padding: 5px;
-    overflow: auto;
-    max-height: 100px;
-    scrollbar-width: none;
-}
 #above{
     z-index: 1;
     background: linear-gradient(40deg,rgba(164, 189, 227, 1) 0%, rgba(100, 155, 227, 1) 49%, rgba(61, 122, 194, 1) 86%);
