@@ -259,11 +259,21 @@ a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
         padding: 5px;
         overflow: auto;
         max-height: 100px;
-        scrollbar-width: none;    
+        scrollbar-width: none;   
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 0.028em;
     }
     a{
         text-decoration: none;
         color: #222;
+    }
+    iframe{
+        width: 100%;
+        height: fit-content;
+        max-height: 80px;
+    }
+    p{
+        margin: 0;
     }
 }
 
