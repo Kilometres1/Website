@@ -49,16 +49,7 @@ body{
 
     
 }
-.subtitle{
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 40;
-    color: black;
-    background-color: white;
-    border: solid black 4px;
-    width: fit-content;
-    padding: 10px;
-}
+
 .subtitleIntro{
     font-family: Arial;
     font-weight: bold;
