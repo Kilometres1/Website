@@ -51,9 +51,16 @@ html{
     max-width: 1200px;
 }
 
+.center_wide{
+    margin: auto;
+    width: 100%;
+    max-width: 1600px;
+}
+
 }
 body{
-
+    font-family: Arial;
+    font-size: 20;
     position: relative;
     background-color: white;
     margin: 0;
@@ -75,4 +82,37 @@ p{
     font-family: Arial;
     font-size: 20;
     
+}
+
+#mapdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
+    .selectbox{
+        position: absolute;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        border: solid black 3px;
+    }
+
+    #mapCaption{
+        border: solid black 4px;
+        margin-left: 40px;
+        padding: 10px;
+        width: 600px;
+    }
+
+
+}
+
+#characters{
+    display: flex;
+    width: 200px;
+
+    h4{
+        padding: 10px;
+    }
 }

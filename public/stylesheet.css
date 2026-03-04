@@ -270,7 +270,6 @@ a.header:hover {text-decoration:none;color: rgb(189, 1, 218);}
     iframe{
         width: 100%;
         height: fit-content;
-        max-height: 80px;
     }
     p{
         margin: 0;
