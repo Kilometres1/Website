@@ -31,11 +31,13 @@ html{
     width: 100%;
 
 #header{
+    z-index: 4;
     position: sticky;
     display: flex;
     width: fit-content;
     top: 0;
     padding: 10px;
+    background-color: white;
     a{
         color: black;
         text-decoration: none;
@@ -110,9 +112,32 @@ p{
 
 #characters{
     display: flex;
-    width: 200px;
+    flex-direction: column;
+    width: 1200px;
+
 
     h4{
-        padding: 10px;
+        margin: 5px;
+    }
+
+    .subCharacters{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h3{
+            width: 150px;
+        }
+
+        div{
+            padding: 10px;
+            margin: 10px;
+            border: solid;
+            width: 300px;
+            img{
+                width: 200px;
+                height: 300;
+            }
+        }
     }
 }
