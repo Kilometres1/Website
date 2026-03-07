@@ -46,6 +46,44 @@ html{
     
 
 }
+#contents{
+    pointer-events: all;
+    position: sticky;
+    left: 100%;
+    top: 20px;
+    width: 350px;
+    z-index: 5;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    border: solid black 3px ;
+    border-radius: 8px;
+    font-size: 12;
+    font-weight: bold;
+    ul{
+        padding: 20px;
+        list-style-type: none;
+        margin: 0;
+    }
+    li{
+        margin-bottom: 5px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        
+        
+    }
+    pre{
+        margin: 0;
+        font-family: Arial;
+    }
+}
+
+#contentspagenumbers{
+    margin-left: 0;
+}
 
 .center{
     margin: auto;
@@ -67,7 +105,6 @@ body{
     background-color: white;
     margin: 0;
     width: 100%;
-    
 }
 .subtitle{
     font-family: Arial;
@@ -92,28 +129,21 @@ p{
     justify-content: space-between;
     position: relative;
 
-    .selectbox{
+    a{
         position: absolute;
-        top: 0;
-        width: 50px;
-        height: 50px;
-        border: solid black 3px;
-    }
-
-    #mapCaption{
-        border: solid black 4px;
-        margin-left: 40px;
-        padding: 10px;
-        width: 600px;
+        
     }
 
 
 }
 
 #characters{
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     width: 1200px;
+    max-height: 1000px;
+    overflow: auto;
 
 
     h4{
@@ -123,20 +153,24 @@ p{
     .subCharacters{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+
 
         h3{
             width: 150px;
         }
 
         div{
+            max-width: 250px;
             padding: 10px;
             margin: 10px;
             border: solid;
             width: 300px;
             img{
-                width: 200px;
+                margin: auto;
+                display: block;
                 height: 300;
+                max-width: 100%;
+                
             }
         }
     }
