@@ -33,7 +33,7 @@ html{
     margin: 10px;
 }
 #header{
-    position: relative;
+
     z-index: 2;
     padding: 10px;
     background-color: #272a34;
@@ -68,6 +68,26 @@ h5, ol{
     font-family: Atkinson;
 }
 
+@media only screen and (max-width: 1200px) {/*PHONES CSS*/
+
+    #main{
+        flex-direction: column;
+    }
+    #header{
+        position: sticky;
+        top: 0;
+    }
+}
+@media only screen and (min-width: 1200px) {/*PC CSS*/
+
+    #main{
+        flex-direction: row;
+    }
+    #header{
+        position: relative;
+    }
+}
+
 #rightheader div{
     display: flex;
     flex-direction: row;
@@ -83,6 +103,7 @@ h5, ol{
 /*THE SECTION FOR THE BODY*/
 
 
+
 body{
     margin: 0;
     color: white;
@@ -90,7 +111,7 @@ body{
 }
 #main{
     display: flex;
-    flex-direction: row;
+
 }
 #left{
     scroll-behavior: smooth;
