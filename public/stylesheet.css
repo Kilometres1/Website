@@ -159,7 +159,8 @@
     }
     #webrings{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    overflow: auto;
     max-width: 250px;
     }
     #tentext{
