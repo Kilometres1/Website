@@ -77,6 +77,15 @@ h5, ol{
         position: sticky;
         top: 0;
     }
+    #left{
+        height: max-content;
+        width: 100%;
+    }
+    #right{
+        width: 100%;
+        height: max-content;
+        
+    }
 }
 @media only screen and (min-width: 1200px) {/*PC CSS*/
 
@@ -85,6 +94,15 @@ h5, ol{
     }
     #header{
         position: relative;
+    }
+    #left{
+        height: 80vh;
+        width: fit-content;
+    }
+    #right{
+        height: 80vh;
+        width: 30%;
+        min-width: 300px;
     }
 }
 
@@ -118,7 +136,7 @@ body{
     z-index: 1;
     overflow: auto;
     scrollbar-width: none;
-    height: 80vh;
+    
     border-right: white dashed;
 }
 .imagecollection{
@@ -162,10 +180,7 @@ body{
   margin: auto;
 }
 #right{
-    position: sticky;
-    width: 45%;
-    height: 70vh;
-    min-width: 650px;
+    position: relative;
     overflow: auto;
     padding-left: 10px;
     padding-right: 10px;
@@ -198,7 +213,13 @@ body{
     }
 }
 
-
+#hx90Gallery{
+    display: flex;
+    flex-direction: row;
+    img{
+        width: 50%;
+    }
+}
 
 
 
