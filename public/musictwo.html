@@ -1,0 +1,345 @@
+<html>
+    <head>
+        <link href="stylesheetmusictwo.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="icon" type="image/png" href="MusicResources/icon.png">
+        <title>Music</title>
+        <meta charset="UTF-8">
+    </head>
+    <style>
+    </style>
+    <body>
+        <div id="header">
+            <div>
+                <a href="index.html">⬑ Return</a>
+                <a href="https://www.last.fm/user/kilometres__" target="_blank">⌾ LastFM ↗</a>
+                <a href="https://open.spotify.com/user/eitw7s2uqoniskizyxlpmayif" target="_blank">⌾ Spotify ↗</a>
+            </div>
+            <div style="transform: translateY(20px);"><h1 style="font-size: 100;font-style: italic;margin: -40;margin-left: 30;">Music</h1></div>
+            <div style="width: 200px;"></div>
+            <div id="listeningwidget">
+                <iframe src="https://petrapixel.neocities.org/widgets/lastfm?center=1&font-family=Arial&font-size=0px&color=white&username=kilometres__&delimiter=-&underline=0&showAlbumCover=70" frameborder="0" title="Last.Fm Status" style="width: 90px;"></iframe>
+                <div id="lastfm-widget">
+                    <iframe src="https://petrapixel.neocities.org/widgets/lastfm?center=1&font-family=Arial&font-size=16px&color=white&username=kilometres__&delimiter=-&underline=0" frameborder="0" title="Last.Fm Status" style="width: 250px;max-height: 55px;"></iframe>
+                    <div><p style="margin: 0; text-align: center;"><small>powered by <a href="https://github.com/biancarosa/lastfm-last-played" target="_blank">@biancarosa</a></small></p></div>
+                </div>
+                <script type="text/javascript">
+                    let user = 'kilometres__';
+                    let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
+                    let song = document.querySelector('#song');
+                    let art = document.querySelector('#art');
+                    fetch(url)
+                        .then(function (response) {
+                            return response.json()
+                        }).then(function (json) {
+                            song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
+                            document.getElementById("lastplayedart").src = json['track']['image']['2']['#text'];
+                        });
+                    
+                </script>
+            </div>
+        </div>
+        
+        <div id="main">
+            <h2 class="year">-- 2026 --</h2>
+            <div class="albums">
+                <div class="album">
+                    <img class="art" src="MusicResources/gonarchslair.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="">
+                    <div class="content">
+                        <h2>Gonarch's Lair - Vylet Pony</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - ?!</h5>
+                        <h5>✿ - outlaw</h5>
+                        <h5>✿ - blankflank2</h5>
+                        <h4>Notes:</h4>
+                        <p>I think this mixtape has really cemented Vylet as one of my favourite artists!!</p>
+                    </div>
+                </div>
+
+                <div class="album">
+                    <img class="art" src="MusicResources/crashtest.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="">
+                    <div class="content">
+                        <h2>Crashtest - Jam2go</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - Talk To You Later</h5>
+                        <h5>✿ - Honeycrisp</h5>
+                        <h5>✿ - A Million Postcards</h5>
+                        <h4>Notes:</h4>
+                        <p>This is probably my favourite collection of songs that use Teto's (and Momo's) voicebank, and getting to watch the music videos for these was an absolute treat!</p>
+                        <p>I'm also a huge fan of the extras that Jam posted to his <a href="https://jam2go.com/arbormyth/crashtest">website</a>, especially these infographics!</p>
+                        <img src="MusicResources/DidYouKnow_jam.jpg" alt="">
+                        <img src="MusicResources/DidYouKnow_teto.jpg" alt="">
+                        <img src="MusicResources/DidYouKnow_carw.webp" alt="">
+                        <img src="MusicResources/DidYouKnow_who.webp" alt="">
+                    </div>
+                </div>
+
+                <div class="album">
+                    <img class="art" src="MusicResources/fearofgod.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="">
+                    <div class="content">
+                        <h2>Fear of God - Penelope Scott</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - It Girl / It Girl Intro</h5>
+                        <h5>✿ - Letters to Santa</h5>
+                        <h5>✿ - Loser</h5>
+                        <h4>Notes:</h4>
+                        <p>Once again Scott has dropped peak, and this will be on repeat for the next several years</p>
+                    </div>
+                </div>
+
+            </div>
+            <h2 class="year">-- 2025 --</h2>
+            <div class="albums">
+
+                <div class="album">
+                    <img class="art" src="MusicResources/spyglass.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="">
+                    <div class="content">
+                        <h2>Spyglass - Louie Zong</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>Notes:</h4>
+                        <p>I like listening to this album as larger connected piece, so I dont think a ranking works here</p>
+                    </div>
+                </div>
+
+                <div class="album">
+                    <img class="art" src="MusicResources/persona.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="">
+                    <div class="content">
+                        <h2>Persona - Half•Alive</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - Sophie's House</h5>
+                        <h5>✿ - Automatic</h5>
+                        <h5>✿ - All My Love (Imperative)</h5>
+                    </div>
+                </div>
+
+                <div class="album">
+                    <img class="art" src="MusicResources/ponystep.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="">
+                    <div class="content">
+                        <h2>Love and Ponystep - Vylet Pony</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - Falling in Love With a Corporate Illustration</h5>
+                        <h5>✿ - Wonka x Howl</h5>
+                        <h5>✿ - My Love is a Quickscope</h5>
+                    </div>
+                </div>
+
+                <div class="album">
+                    <img class="art" src="MusicResources/cardiaccontrepoint.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="">
+                    <div class="content">
+                        <h2>CARDIAC CONTREPOINT - FLAVOR FOLEY</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - weathergirl</h5>
+                        <h5>✿ - Water the Roses</h5>
+                        <h5>✿ - BUTCHER VANITY</h5>
+                    </div>
+                </div>
+
+                <div class="album">
+                    <img class="art" src="MusicResources/waterdogs.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="">
+                    <div class="content">
+                        <h2>Water Dogs - Penelope Scott</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - Spirit</h5>
+                        <h5>✿ - Water Girl</h5>
+                        <h5>✿ - Naiad Girl</h5>
+                    </div>
+                </div>
+
+            </div>
+            <h2 class="year">-- 2024 --</h2>
+            <div class="albums">
+
+                <div class="album">
+                    <img class="art" src="MusicResources/constcompandeluxe.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="">
+                    <div class="content">
+                        <h2>Constant Companions - Jamie Paige</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - Cadmium Colors</h5>
+                        <h5>✿ - Dance Delightful</h5>
+                        <h5>✿ - Machine Love</h5>
+                    </div>
+                </div>
+
+                <div class="album">
+                    <img class="art" src="MusicResources/smile.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="">
+                    <div class="content">
+                        <h2>SMILE! :D - Porter Robinson</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - Perfect Pinterest Garden</h5>
+                        <h5>✿ - Mona Lisa</h5>
+                        <h5>✿ - Cheerleader</h5>
+                    </div>
+                </div>
+
+                <div class="album">
+                    <img class="art" src="MusicResources/gloomdiv.jpg" alt="">
+                    <img class="disc" src="MusicResources/cd.png" alt="">
+                    <div class="content">
+                        <h2>GLOOM DIVISION - I DONT KNOW HOW BUT THEY FOUND ME</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - DOWNSIDE</h5>
+                        <h5>✿ - KISS & TELL</h5>
+                        <h5>✿ - SPKOTHDVL</h5>
+                    </div>
+                </div>
+
+            </div>
+            <h2 class="year">-- 2022 --</h2>
+            <div class="albums">
+
+                <div class="album">
+                    <img class="art" src="MusicResources/rising.jpg" alt="">
+                    <img class="disc" src="MusicResources/risingdisc.png" alt="">
+                    <div class="content">
+                        <h2>Rising - mxmtoon</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - victim of nostalgia</h5>
+                        <h5>✿ - mona lisa</h5>
+                        <h5>✿ - sad disco</h5>
+                    </div>
+                </div>
+
+                <div class="album">
+                    <img class="art" src="MusicResources/wormfood.jpg" alt="">
+                    <img class="disc" src="MusicResources/wormfooddisc.png" alt="">
+                    <div class="content">
+                        <h2>Wormfood - Cavetown</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - fall in love with a girl</h5>
+                        <h5>✿ - 1994</h5>
+                        <h5>✿ - worm food</h5>
+                    </div>
+                </div>
+
+                <div class="album">
+                    <img class="art" src="MusicResources/marvins.png" alt="">
+                    <img class="disc" src="MusicResources/marvinsdisc.png" alt="">
+                    <div class="content">
+                        <h2>Marvin's Marvelous Mechanical Museum - Tally Hall</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - The Whole World And You</h5>
+                        <h5>✿ - Ruler of Everything</h5>
+                        <h5>✿ - Greener</h5>
+                    </div>
+                </div>
+
+            </div>
+            <h2 class="year">-- 2020 --</h2>
+            <div class="albums">
+
+                <div class="album">
+                    <img class="art" src="MusicResources/sleepyhead.jpg" alt="">
+                    <img class="disc" src="MusicResources/sleepyheaddisc.png" alt="">
+                    <div class="content">
+                        <h2>Sleepyhead - Cavetown</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - Telescope</h5>
+                        <h5>✿ - Snail</h5>
+                        <h5>✿ - I Miss My Mum</h5>
+                    </div>
+                </div>
+
+                <div class="album">
+                    <img class="art" src="MusicResources/razzmatazz.jpg" alt="">
+                    <img class="disc" src="MusicResources/razzmatazzdisc.png" alt="">
+                    <div class="content">
+                        <h2>RAZZMATAZZ - I DONT KNOW HOW BUT THEY FOUND ME</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - Clusterhug</h5>
+                        <h5>✿ - Door</h5>
+                        <h5>✿ - Need You Here</h5>
+                    </div>
+                </div>
+
+                <div class="album">
+                    <img class="art" src="MusicResources/1981ep.png" alt="">
+                    <img class="disc" src="MusicResources/1981epdisc.png" alt="">
+                    <div class="content">
+                        <h2>1981 Extended Play - I DONT KNOW HOW BUT THEY FOUND ME</h2>
+                        <p class="spacer"> • • • </p>
+                        <h4>favourite songs:</h4>
+                        <h5>✿ - Choke</h5>
+                        <h5>✿ - Bleed Magic</h5>
+                        <h5>✿ - Do It All The Time</h5>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div>
+                <div id="statfiles">
+                    <p style="font-family: cheese;margin: 4px;"><b>Hover over a file to see more!</b></p>
+                    <div id="years">
+                        <div class="stat">
+                            <div>
+                                <h3>2025</h3>
+                            </div>
+                            <img src="MusicResources/wrap2025.png" alt="">
+                        </div>
+                        <div class="stat">
+                            <div>
+                                <h3>2024</h3>
+                            </div>
+                            <img src="MusicResources/wrap2024.png" alt="">
+                        </div>
+                        <div class="stat">
+                            <div>
+                                <h3>2023</h3>
+                            </div>
+                            <img src="MusicResources/wrap2023.png" alt="">
+                        </div>
+                        <div class="stat">
+                            <div>
+                                <h3>2022</h3>
+                            </div>
+                            <img src="MusicResources/wrap2022.png" alt="">
+                        </div>
+                        <div class="stat">
+                            <div>
+                                <h3>2021</h3>
+                            </div>
+                            <img src="MusicResources/wrap2021.png" alt="">
+                        </div>
+                        <div class="stat">
+                            <div>
+                                <h3>2020</h3>
+                            </div>
+                            <img src="MusicResources/wrap2020.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,222 @@
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-Regular.ttf);
+}
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-Italic.ttf);
+    font-style: italic;
+}
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-Regular.ttf);
+}
+@font-face {
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-Italic.ttf);
+    font-style: italic;
+}
+@font-face {
+    font-family: Cheese;
+    src: url(fonts/Cheese\ Milky.otf);
+}
+
+body{
+    z-index: 2;
+    background-image: url(MusicResources/flowers.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    margin: 0;
+}
+
+/* START OF HEADER */
+
+#header{
+    position: relative;
+    z-index: 2;
+
+    padding: 10px;
+    background-color: #14181c;
+    font-family: Atkinson;
+    font-style: normal;
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+
+    div{
+        display: flex;
+        flex-direction: column;    
+        justify-content: space-between;            
+    }
+
+    a{
+        color: #44d152;
+        font-style: italic;
+        text-decoration: none;
+        text-wrap-mode: nowrap;
+    }
+}
+
+#listeningwidget{
+    max-height: 70px;
+}
+
+#lastfmwidget{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#header div + div{
+    display: flex;
+    flex-direction: row;
+}
+
+#lastplayedart{
+    height: 65;
+    margin-right: 20px;
+}
+/* END OF HEADER */
+
+
+/* START OF MAIN BODY */
+
+#main{
+    font-family: atkinson;
+}
+
+.year{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.albums{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.album{
+    width: 320px;
+    max-height: 300px;
+    overflow: auto;
+    padding: 10px;
+    margin: 10px;
+    background-color: #23332199;
+    scrollbar-color: #8dc754 #cbf0c738;
+    color: white;
+
+}
+
+.art{
+    position: relative;
+    z-index: 2;
+    width: 200px;
+    border: solid #8aad67;
+}
+.disc{
+    z-index: 1;
+    width: 200px;
+    position: relative;
+    bottom: 65%;
+    transform: rotate(-90deg);
+    transition: ease 0.5s;
+}
+.art:hover + .disc{
+    transform: translateX(50%);
+}
+.disc:hover{
+    transform: translateX(50%);
+}
+.content{
+    transform: translateY(-200px);
+    a{
+        color: #8dc754;
+    }
+    p.spacer{
+        text-align: center;
+    }
+    h2{
+        font-weight: bold;
+    }
+    h4{
+        font-style: italic;
+        font-size: 15pt;
+    }
+    h5{
+        margin: 5px;
+        font-size: 15pt;
+    }
+    img{
+        width: 100%;
+    }
+}
+/* END OF MAIN BODY */
+
+
+/* START OF WRAPPEDS */
+
+
+
+#statfiles{
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 100vw;
+    background-color: white;
+    transform: translateY(50%);
+}
+
+#years{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.stat{
+    height: 500px;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    transition: ease 0.2s 0.1s;
+
+    img{
+        width: 100%;
+    }
+    
+    div{
+        
+        border: solid;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(210, 255, 239);
+        h3{
+            margin: 5px;
+            writing-mode: vertical-rl;
+            text-orientation: sideways;
+        }
+
+    }
+}
+.stat:hover{
+    transform: translateY(-52%);
+    
+}
+/* END OF WRAPPEDS */
