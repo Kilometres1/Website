@@ -111,6 +111,7 @@ body{
 }
 
 .album{
+    position: relative;
     width: 320px;
     max-height: 300px;
     overflow: auto;
@@ -131,19 +132,19 @@ body{
 .disc{
     z-index: 1;
     width: 200px;
-    position: relative;
+    position: absolute;
     bottom: 65%;
-    transform: rotate(-90deg);
+    
+    transform: translate(-100%, 50%) rotate(-90deg);
     transition: ease 0.5s;
 }
 .art:hover + .disc{
-    transform: translateX(50%);
+    transform: translate(-50%, 50%);
 }
 .disc:hover{
-    transform: translateX(50%);
+    transform: translate(-50%, 50%);
 }
 .content{
-    transform: translateY(-200px);
     a{
         color: #8dc754;
     }
