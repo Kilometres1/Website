@@ -1,0 +1,128 @@
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-Regular.ttf);
+}
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-Italic.ttf);
+    font-style: italic;
+}
+@font-face {
+    font-family: Nunito;
+    src: url(https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: Atkinson;
+    src: url(https://kilometres.neocities.org/fonts/AtkinsonHyperlegible-Regular.ttf);
+}
+html{
+    font-family: Atkinson;
+    background-color: var(--background);
+}
+
+#header{
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    a{
+        color: var(--linkText);
+    }
+}
+
+#main{
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    .photoGallery{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        img{
+            max-width: 25vw;
+            margin: 10px;
+        }
+    }
+
+    .caption{
+        width: 100%;
+        font-style: italic;
+        margin: 0;
+        font-size: 10pt;
+        text-align:center;
+    }
+
+    > div{
+        position: relative;
+        margin: 10px;
+        padding: 10px;
+        h4{
+            margin-top: 0px;
+            margin-bottom: 0;
+        }
+        h6{
+            margin-top: 0;
+        }
+        .version{
+            position: absolute;
+            margin: 2px;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+a{
+    text-decoration: none;
+    color: var(--linkText);
+    div{
+        color: white;
+        margin: 20px;
+        position: absolute;
+        p{
+            margin: 0;
+        }
+    }
+}
+
+a.popup{
+  position: relative;
+  text-decoration: underline dashed;
+  color: var(--linkText);
+
+  span{
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: ease 0.25s;
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translate(-50%,-1rem);
+    max-width: 300px;
+    width: max-content;
+    padding: 5px;
+    background-color: var(--text);
+    color: var(--background);
+  }
+}
+
+a.popup span:hover,a.popup:hover span{
+  visibility: visible;
+
+  
+  opacity: 1;
+
+}
+
+i{
+    font-size: small;
+    
+}

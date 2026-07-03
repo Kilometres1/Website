@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link href="projectResources/ProjectStylesheet.css" rel="stylesheet" type="text/css" media="all">
+        <!--<link rel="icon" type="image/png" href="IndexResources/icon.png">-->
+        <title>projects</title>
+        <meta charset="UTF-8">
+        <style>
+            :root{
+            --background: #caf8ff;
+            --linkText: #086daa;
+            --text: #000000;
+            }
+        </style>
+    </head>
+
+    <div id="header">
+        <h2><a href="projects.html" class="return">⬑</a> Weather Satellite Station</h2>
+    </div>
+    <body>
+        <div id="main">
+            <h3>About</h3>
+            <p>This project aims to provide regular, frequent images of weather and cloud conditions over Western Europe. This will help with identifying weather patterns and meteorology.</p>
+            <div class="photoGallery">
+                <a href="projectResources/VHF/msu_mr_rgb_AVHRR_221_False_Color_corrected.png"><img src="projectResources/VHF/221_mini.png" alt=""></a>
+                <a href="projectResources/VHF/msu_mr_rgb_AVHRR_3a21_False_Color_corrected.png"><img src="projectResources/VHF/3a21_mini.png" alt=""></a>
+                <a href="projectResources/VHF/msu_mr_rgb_MSA_corrected.png"><img src="projectResources/VHF/msa_mini.png" alt=""></a>
+            </div>
+            <p class="caption">An example of the output images from one pass. click for full image.</p>
+            <h3>Transmitters</h3>
+            <p>These images are captured from weather satellites, specifically the Russian Meteor-M 2-4 and 2-3 satellites. These satellites were chosen for this, as they both transmit a constant stream of <a class="popup" href="https://www.sigidwiki.com/wiki/Low_Rate_Picture_Transmission_(LRPT)">LRPT<span>Low Rate Picture Transmission: a low bit-rate data transmission standard, first used in 2006</span></a> data in the <a class="popup">VHF<span>Very High Frequency: 30-300MHz</span></a> band. This frequency is very easy to recieve with an omnidirectional antenna, meaning a permanent recieving station is easy to maintain.</p>
+            <h3>Reception Pipeline</h3>
+            <p>The signals are transmitted at 137MHz, and recieved by an omnidirectional QFH (Quadrifilar Helix) antenna mounted ~3m above the ground.</p>
+            <div class="photoGallery">
+            <img src="projectResources/VHF/antenna.jpg" alt="" style="height: 400px;position: relative; margin: auto;">
+            </div>
+            <p class="caption">The antenna used to recieve the data.</p>
+            <p>The signal is passed though a Bias Tee-powered Low Noise Amplifier, and then through ~30m of coaxial cable, until it reaches the reciever. The reciever is a LibreSDR B210 Software defined radio.</p>
+            <p>This SDR is connected to a Raspberry Pi running Satdump, a "generic satellite data processing software". This decodes and projects the images such that distortions and the edges of the frame is minimised - at the cost of some resolution.</p>
+            <p>The final images are saved to a <a class="popup">NAS<span>Network Attached Storage</span></a>, and will be made available to the public.</p>
+            <img src="projectResources/VHF/pipeline.png" alt="" style="max-width: 100%;">
+            <h3>Future Plans</h3>
+            <p>I plan to change the processing settings of Satdump, to get more control over the final images and make some timelapses. If this proves to be too difficult I may try and make my own decoder, I think this would be a good way to practice my programming skills.</p>
+            <p>Making a way to easily show changes in the clouds over time, like on weather apps, and have some amount of analysis would also be an interesting endeavour.</p>
+            <p>I would like to get higher-resolution imagery, so I'm trying to make an L-Band recieving setup, but that's <a href="">work in progress</a> right now.</p>
+            <h3>Limitations</h3>
+            <p>One major drawback of this system is that the satellites are in a <a class="popup">sun-synchronous orbit<span>A type of Low Earth Orbit, inclined such that the satellite passes over the same part of the planet at the same time every day.</span></a>, meaning they only pass overhead twice a day, 12 hours apart. Because of this, there are large periods (6+ hours) where no imagery is available.</p>
+            <p>Another is that due to the decomissioning of the United States' <a class="popup" href="https://www.ospo.noaa.gov/operations/poes/">POES<span>Polar Orbiting Environmental Satellites: NOAA's old satellite fleet, replaced by JPSS.</span></a>  satellites in late 2025, the Meteor Satellites are currently the only two to transmit on the VHF frequency band. This is because it is a low frequency, with a low bandwidth, so only a low data-rate can be achieved. In this case LRPT is only 80kbps. </p>
+            <p>The low data rate of LRPT means that only 3 colour channels can be transmitted. Whilst these channels are useful to produce false colour images, they are all of wavelengths in the visible spectrum, meaning that the images are black during the night. And so all of the night passes of the satellites are useless for cloud-cover observation.</p>
+        </div>
+    </body>
+</html>
