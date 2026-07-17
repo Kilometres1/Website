@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <link href="projectResources/ProjectStylesheet.css" rel="stylesheet" type="text/css" media="all">
+        <!--<link rel="icon" type="image/png" href="IndexResources/icon.png">-->
+        <title>L Band Receiver</title>
+        <meta charset="UTF-8">
+        <style>
+            :root{
+            --background: #caf8ff;
+            --linkText: #086daa;
+            --text: #000000;
+            }
+        </style>
+    </head>
+
+    <div id="header">
+        <h2><a href="projects.html" class="return">⬑ </a>L-Band Satellite Station (Work in Progress)</h2>
+    </div>
+    <body>
+        <div id="main">
+            <h4>About</h4>
+            <p>This is a station for recieving weather imagery from satellites that transmit in the <a class="popup">L-Band<span>The band of the EM spectrum that has a frequency of 1 - 2GHz</span></a> (~1700MHz) range. This design is based on the <a href="https://wiki.satnogs.org/SatNOGS_Rotator_v3">SatNOGS Rotator v3</a>, with some modifications here and there, and using custom code.</p>
+            <h4>Background Info</h4>
+            <p>Most low data-rate transmissions are in the VHF Band, and  so you would only need an omnidirectional antenna and an SDR, like in <a href="projectVHF.html">this project</a>. However, in order to get a better quality image, more data must be transmitted, and so a higher frequency is used.</p>
+            <p>Satellites like Europe's MetOp series and Russia's Meteor series both transmit on the L-Band, with an image resolution of ~1km/pixel. MetOP transmits around 3.5Mbps of data compared to Meteor's 0.665Mbps, meaning that the former sends a lot more data, including several more observation frequencies (or channels), which makes it far more useful for meteorology than the latter. Meteor's benefit is that it can send the same resolution in LRPT or HRPT, but LRPT is compressed and has fewer channels. </p>
+            <p>To show the benefits of the higher resolution, below are three images of the north-west of Spain and Portugal, each being taken from a different satellite and different frequency. Each also has a 4x increase in resolution from the last.</p>
+            <div class="photoGallery">
+                <a href="projectResources/rotator/satimg/1.jpg" target="_blank"><div><p>NOAA 19</p><p>APT</p><p>4km/px</p></div><img src="projectResources/rotator/1.jpg" alt=""></a>
+                <a href="projectResources/rotator/satimg/2.jpg" target="_blank"><div><p>Meteor M N2-4</p><p>LRPT</p><p>1km/px</p></div><img src="projectResources/rotator/2.jpg" alt=""></a>
+                <a href="projectResources/rotator/satimg/3.jpg" target="_blank"><div><p>Fengyun 3H</p><p>AHRPT</p><p>250m/px</p></div><img src="projectResources/rotator/3.jpg" alt=""></a>
+            </div>
+            <div class="caption">Three images of the same location from different satellites. Click for full image. Note: Fengyun Satellites only transmit on the X-Band, and so cannot be used by this station. This project aims for 1km/px, the centre image.</div>
+            <p>In order for more consistently high quality images, I have decided that a recieving station that can recieve L-Band transmissions will be a good step-up from the VHF Station.</p>
+            <h4>Part 1: The Feed and Dish (initial testing)</h4>
+            <p>Before working on the rotator, I decided to try recieving the imagery by manually rotating the dish which was really difficult, especially when trying to get an initial lock.</p>
+            <p>The dish used in this phase was an old satellite dish, used for recieving European TV shows from geostationary satellites. Because it's an offset dish it had to be mounted upside down in order to point closer to the horizon, and if you look closely, you can see it's counterweight is a low-tech solution of two bricks! This counterweight is <i>very</i> important, as the dish alone weighs ~20KG. This is likely due to it being made of some kind of steel (I noticed it's slightly magnetic). The next dish will likely be an aluminium mesh surface to drastically cut down on weight, or else the rotator will burn out!</p>
+            <div class="photoGallery">
+                <a><img src="projectResources/rotator/initialdish.jpg" alt="" style="max-height: 700px;"></a>
+            </div>
+            <div class="caption">The initial testing setup</div>
+            <p> </p>
+            <h4>The Rotator</h4>
+            <div class="photoGallery">
+                <a><img src="projectResources/rotator/box.jpg" alt="" style="max-height: 700px;"></a>
+                <a><img src="projectResources/rotator/L bracket.png" alt=""></a>
+            </div>
+            <h4>The Electronics</h4>
+            <p>This rotator is controlled by an Arduino Pro Mini, which connects to a RotCtl instance on a connected Raspberry Pi. The two 48mm NEMA 17 stepper motors, which drive one axis each, are powered using DRV8825 drivers. The motors are powered by a 24V 3A laptop power brick, and the Pi will have a USB power cable, however I do plan to simplify this to one power supply.</p>
+            <p>Because the stepper motors run at very high currents, the driver boards get <i>very hot</i>, so need to be cooled with an 80mm fan.</p>
+            <p>I made the mistake of not including any feedback sensors to detect the azimuth or elevation when in use, so if the dish slips or is pushed I can't tell. This is why the dish will occasionally home to a known point (0,0), detected by some microswitches.</p>
+            <p>The design drives the axies with worm gears so back driving is not a huge concern, and the steppers "step" through their rotation, so their position can be estimated.</p>
+            <div class="photoGallery">
+                <a><img src="projectResources/rotator/electronicsbox.png" alt=""></a>
+                <a><img src="projectResources/rotator/nodish.jpg" alt="" style="max-height: 700px;"></a>
+            </div>
+            <div class="caption">From Left: The 3D model of the box that houses the electronics, The finalised box, The box attached to the rotator.</div>
+            <h4>Code</h4>
+            <h4>Testing</h4>
+            <div class="photoGallery">
+            <a><img src="projectResources/rotator/testing.jpg" alt="" style="max-height: 700px;"></a>
+            </div>
+            <p>This thing <i>barely</i> has the torque to turn the dish on a nice day, so I can't imagine it working in a storm. This is why I'm making my own aluminium dish this summer.</p>
+        </div>
+    </body>
+</html>
