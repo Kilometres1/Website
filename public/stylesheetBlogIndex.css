@@ -1,0 +1,33 @@
+body{
+    font-family: Atkinson;
+    background-color: rgb(178, 79, 79);
+    background-attachment: fixed;
+}
+
+
+#blogThumbs{
+
+    img{
+        
+        border-radius: 5px;
+        height: 200px;
+        transition: ease 0.5s;
+    }
+    .image{
+        position: absolute;
+        z-index: 2;
+        
+    }
+    .image:hover{
+        opacity: 0;
+    }
+    .clip:hover .image{
+        opacity: 0;
+    }
+}
+
+.thumb{
+    width: min-content;
+    position: relative;
+    border-radius: 10px;
+}
