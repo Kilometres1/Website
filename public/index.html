@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="https://unpkg.com/98.css" />
         <link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
+        <link rel="stylesheet" href="fonts.css" type="text/css" media="all">
         <link rel="stylesheet" href="https://cdring.neocities.org/cdring/onionring.css">
         <link rel="icon" type="image/png" href="IndexResources/icon.png">
         <script type="text/javascript" src="IndexResources/dom-drag.js"></script>
@@ -22,7 +23,7 @@
                     <tr>
                         <div id="links">
                             <div><a href="musictwo.html" >music</a></div>
-                            <!--<div><a href="ublog.html" >μblog</a></div> -->
+                            <div><a href="blogIndex.html" >blog</a></div>
                             <!-- <div><a href="computers.html"><del>computers</del></a></div> -->
                             <div><a href="projects.html">projects</a></div>
                             <div><a href="photography.html">photography</a></div>
@@ -39,6 +40,7 @@
                     <div id="updatesPane">
                         <div style="width: 60%;border-right: dashed rgb(30, 42, 60) 1px;">
                             <b>Site Updates:</b>
+                            <li>2026/7/19 - new blog format and page, new albums in music - which has had a redesign, and index/about edits</li>
                             <li>2026/5/31 - Added so new albums into /music</li>
                             <li>2026/5/13 - New photos in /photography! I got a new camera, but I want to experiment w lenses before I make a post on it. Apollocheese for less updates recently, Im not sure what I want to do w this site tbh, and exams havent been helping loll.</li>
                             <li>2026/4/11 - I've joined the Wii Webring; /phtotgraphy updates: more photos, new camera!</li>
@@ -177,9 +179,10 @@
                             <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close"></button></div>
                         </div>
                         <div class="window-body" style="width: 220px;">
-                            <h4 style="margin-top: 0;">Hi, I'm Miles!</h4>
-                            <p>I'm an undergrad in my 3rd year, this site is just a place for me to talk about things I like, and projects I'm currently working on!</p>
-                            <img src="IndexResources/me.png" alt="" style="width: 100%;">
+                            <h4 style="margin-top: 0;">Welcome to my site!</h4>
+                            <p>Use the purple links up top to navigate, or theres a sitemap on the right</p>
+                            <p>I don't feel like writing an about me rn, please come back later</p>
+                            <img src="IndexResources/musicfans.jpg" alt="" style="width: 100%;">
                             <p>click <a href="mailto:milesbrindley21825@gmail.com">here</a> to contact me </p>
                         </div>
                     </div>                
@@ -222,20 +225,21 @@
                                 <li>kilometres.neocities.org</li>
                                 <ul>
                                     <li>Index<i style="color: #a60f0f;">↤ You Are Here</i></li>
+                                    <li><a href="musictwo.html">music</a></li>
                                     <details close>
-                                        <summary><a href="music.html">music</a></summary>
+                                    
+                                    <summary><a href="blogIndex.html">blog</a></summary>
                                         <ul>
-                                            <li><a href="music.html#albums">albums</a></li>
-                                            <li><a href="music.html#wrapped">year-by-year</a></li>
+                                            <li><a href="blog/july26.html">July 2026</a></li>
                                         </ul>
                                     </details>
-                                    <li><a href="ublog.html">μblog</a></li>
-                                    <li><a href="computers.html">computers</a></li>
+                                    <!-- <li><a href="computers.html">computers</a></li> -->
                                     <details close>
                                         <summary><a href="projects.html">projects</a></summary>
                                         <ul>
-                                            <li><a href="projects.html#tamagotchi">tamagotchi</a></li>
-                                            <li><a href="projects.html#rotator">rotator</a></li>
+                                            <li><a href="Tamagotchi.html">tamagotchi</a></li>
+                                            <li><a href="lBand.html">Dish and Rotator</a></li>
+                                            <li><a href="VHF.html">VHF Station</a></li>
                                         </ul>
                                     </details>
                                     <li><a href="photography.html">photography</a></li>
@@ -303,6 +307,8 @@
                 var theRoot = document.getElementById("root5");
                 Drag.init(theHandle, theRoot);
             </script>
+            <script src="name.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         </div>
 
 
