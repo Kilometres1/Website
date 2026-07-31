@@ -6,6 +6,9 @@ body{
     max-width: 800px;
     margin: auto;
     background-color: var(--background);
+    background-image: url(../blogResources/july26/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: var(--text)
 }
 .header{
@@ -16,7 +19,7 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
     background-size: cover; 
-
+    
     div{
         
         position: relative;
@@ -30,7 +33,18 @@ body{
         margin: auto;
         margin-bottom: 20px;
         width: fit-content;
-        background-color: aliceblue;
+        background-color: rgb(240, 248, 255);
+    }
+}
+
+#subheader{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.778);
+    margin-bottom: 40px;
+    p{
+        margin: 0;
     }
 }
 
@@ -43,15 +57,24 @@ body{
     
     background-color: var(--foreground);
     padding: 10px;
+    margin-bottom: 40px;
     margin-top: 20px;
-    margin-bottom: 20px;
     img{
+        display: block;
         max-width: 100%;
         max-height: fit-content;
         margin: auto;
     }
-    a:link{text-decoration: none; color: var(--link);}
-    a:visited{text-decoration: none; color: var(--link);}
+    h2{
+        color: var(--bodyText);
+    }
+    p{
+        color: var(--bodyText);
+        text-align: justify;
+        line-height: 1.1;
+    }
+    a:link{text-decoration: none; color: var(--bodyLink);}
+    a:visited{text-decoration: none; color: var(--bodyLink);}
 }
 
 .sideBySide{
@@ -73,5 +96,12 @@ body{
     img{
         margin-right: 10px;
         height: 300px;
+    }
+}
+
+.imgCaption{
+    p{
+        margin: 5px;
+        text-align: center;
     }
 }
