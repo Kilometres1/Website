@@ -1,0 +1,87 @@
+html{
+    font-family: Nunito;
+    background-color: rgb(193, 180, 180);
+    scroll-behavior: smooth;
+}
+
+#main{
+    margin: 10px;
+}
+#header{
+
+    z-index: 2;
+    padding: 10px;
+    background-color: #505051;
+    font-family: Atkinson;
+    font-style: normal;
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+    p{
+        font-family: Arial;
+    }
+    
+}
+#leftheader{
+    display: flex;
+    flex-direction: column;
+    h1{
+        margin: 0;
+        margin-bottom: -40;
+        font-size: 100;
+    }
+}
+
+#rightheader{
+    padding-right: 20px;
+    h2{margin: 0;}
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+body{
+    margin: 0;
+    div.body{
+        padding: 10px;
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+a{
+    color: #00c8ff;
+    text-decoration: none;
+}
+h1{
+    padding-left: 50px;
+    filter: drop-shadow(5px 5px 0 rgb(102, 255, 0)) hue-rotate(180deg)
+    drop-shadow(5px 5px 0 red);
+}
+h3,h2{
+    font-family: Atkinson;
+}
+h5, ol{
+    font-family: Atkinson;
+    
+}
+
+.filmReel{
+    background-color: black;
+    overflow: auto;
+    display: flex;
+
+    height: 300px;
+    border: solid black 10px;
+    img{
+        margin: 0 20px 0 0;   
+    }
+
+}
+
+.body{
+    border-bottom: solid;
+}

@@ -1,39 +1,8 @@
-@font-face {
-    font-family: Nunito;
-    src: url(https://sadhost.neocities.org/fonts/Nunito-Regular.ttf);
-}
-@font-face {
-    font-family: Nunito;
-    src: url(https://sadhost.neocities.org/fonts/Nunito-Bold.ttf);
-    font-weight: bold;
-}
-@font-face {
-    font-family: Nunito;
-    src: url(https://sadhost.neocities.org/fonts/Nunito-Italic.ttf);
-    font-style: italic;
-}
-@font-face {
-    font-family: Nunito;
-    src: url(https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf);
-    font-weight: bold;
-    font-style: italic;
-}
-@font-face {
-    font-family: Atkinson;
-    src: url(fonts/AtkinsonHyperlegible-Italic.ttf);
-    font-style: italic;
-}
-html{
-    font-family: Nunito;
-    background-color: black;
-    scroll-behavior: smooth;
-}
-
 #main{
     margin: 10px;
+
 }
 #header{
-
     z-index: 2;
     padding: 10px;
     background-color: #272a34;
@@ -47,11 +16,12 @@ html{
     
 }
 #leftheader{
+    z-index: 2;
     display: flex;
     flex-direction: column;
     h1{
         margin: 0;
-        margin-bottom: -37;
+        margin-bottom: -31;
         font-size: 100;
     }
 }
@@ -61,192 +31,66 @@ a{
     text-decoration: none;
 }
 h3,h2{
-    text-decoration: overline;
     font-family: Atkinson;
 }
 h5, ol{
     font-family: Atkinson;
 }
 
-@media only screen and (max-width: 1200px) {/*PHONES CSS*/
-
-    #main{
-        flex-direction: column;
-    }
-    #header{
-        position: sticky;
-        top: 0;
-    }
-    #left{
-        height: max-content;
-        width: 100%;
-    }
-    #right{
-        width: 100%;
-        height: max-content;
-        
-    }
-}
-@media only screen and (min-width: 1200px) {/*PC CSS*/
-
-    #main{
-        flex-direction: row;
-    }
-    #header{
-        position: relative;
-    }
-    #left{
-        height: 80vh;
-        width: fit-content;
-    }
-    #right{
-        height: 80vh;
-        width: 30%;
-        min-width: 300px;
-    }
-}
-
-#rightheader div{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 200px;
-    *{
-        width: fit-content;
-        height: fit-content;
-        padding: 5px;
-    }
-}
-
-/*THE SECTION FOR THE BODY*/
-
-
-
 body{
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
     margin: 0;
-    color: white;
-
 }
-#main{
-    display: flex;
 
-}
-#left{
-    scroll-behavior: smooth;
+
+#formatPicker{
     z-index: 1;
-    overflow: auto;
-    scrollbar-width: none;
-    
-    border-right: white dashed;
-}
-.imagecollection{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.imagecollection img{
-    padding: 10px;
-    height: 200px;
-}
-.captionedimage {
-  position: relative;
-  img{
-    transition: .5s ease
-  }
-}
-.captionedimage:hover img {
-  opacity: 0.3;
-}
-
-.captionedimage:hover .caption {
-  opacity: 1;
-}
-.caption {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  width: 75%;
-  top: 50%;
-  margin: auto;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
-}
-.text {
-  color: white;
-  font-size: 16px;
-  padding: 5px;
-  width: fit-content;
-  margin: auto;
-}
-#right{
+    justify-content: center;
+    top: 10px;
+    transform: translateY(-60%);
     position: relative;
-    overflow: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+    margin: auto;
 
-#phonegif{
-    
-    div{
-        opacity: 1;
-        transition: 0.5s, fade;
-        z-index: 2;
-        width: 218px;
-        height: 355px;
-        position: absolute;
-        background-color: #383838;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        p{
-            display: block;
-            margin: auto;
+    a{
+        width: 50%;
+        img{
+            position: absolute;
+            width: 100%;
+        }
+        #filmPic2:hover{
+            opacity: 0;
+        }
+        #filmPic1:hover #filmPic2{
+            opacity: 0;
+        }
+
+        #digitalpic2:hover{
+            opacity: 0;
+        }
+        #digitalpic2:hover #digitalpic1{
+            opacity: 0;
         }
     }
-    div:hover{
-        opacity: 0;
+    div{
+        transition: ease 0.5s;
+        position: relative;
+        transform: translateY();
+        top: 50%;
+        width: 40vw;
     }
-
     img{
+        width: 100%;
+        
+    }
+    #text{
         z-index: 1;
+        text-align: center;
+        background-color: aquamarine;
     }
-}
-
-#hx90Gallery{
-    display: flex;
-    flex-direction: row;
-    img{
-        width: 50%;
-    }
-}
 
 
-
-
-#facts{
-    position: fixed;
-    z-index: 2;
-}
-#fact{
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    opacity: 1;
-    transition: .5s ease;
-}
-#facts:hover #fact{
-    opacity: 0;
-}
-#facts:hover #facter{
-    opacity: 1;
-}
-#facter{
-    transition: .5s ease;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    opacity: 0;
 }
 
 
@@ -264,33 +108,25 @@ body{
 
 
 
-.text{
-    overflow:auto;
-    position: relative;
-    color: white;
-    scrollbar-width: none;
-}
-.text > h4{
-    margin-top: 0;
-}
-.text > h5,li,p{
-    color: rgb(159, 159, 159);
-}
-.text h3{
-    color: #00e08a;
-}
-#albums a{
-    color: #00c8ff;
-}
 
 
 
 
 
 
-/*THE SECTION FOR THE WRAPPED*/
 
 
-#wrapped img{
-    width: 200px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
