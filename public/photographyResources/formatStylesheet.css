@@ -66,7 +66,10 @@ h3,h2{
 }
 h5, ol{
     font-family: Atkinson;
-    
+}
+h4{
+    font-family: SpiritsSoft;
+    font-size: 36;
 }
 
 .filmReel{
@@ -74,12 +77,22 @@ h5, ol{
     overflow: auto;
     display: flex;
 
-    height: 300px;
+    height: 500px;
     border: solid black 10px;
     img{
         margin: 0 20px 0 0;   
     }
 
+}
+
+.filmBlock{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: white;
+    img{
+        height: 300px;
+    }
 }
 
 .body{
