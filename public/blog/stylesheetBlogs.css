@@ -61,16 +61,23 @@ body{
     margin-top: 20px;
     img{
         display: block;
-        max-width: 100%;
+        max-width: 70%;
         max-height: fit-content;
         margin: auto;
     }
-    h2{
+    h2,h3{
         color: var(--bodyText);
+    }
+    h3{
+        width: 100%;
+        border-top: solid 1px;
+        margin-top: 40px;
     }
     p{
         color: var(--bodyText);
         text-align: justify;
+        font-family: Arial;
+        font-size: 12pt;
         line-height: 1.1;
     }
     a:link{text-decoration: none; color: var(--bodyLink);}
@@ -82,10 +89,16 @@ body{
     padding-bottom: 20px;
     display: flex;
     text-align:justify;
+    justify-content: center;
     div,img{
-        width: 50%;
         margin-left: 10px;
         margin-right: 10px;
+    }
+    div{
+        width: 50%
+    }
+    img{
+        height: 100%;
     }
 }
 
