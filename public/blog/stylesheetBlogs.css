@@ -80,8 +80,21 @@ body{
         font-size: 12pt;
         line-height: 1.1;
     }
-    a:link{text-decoration: none; color: var(--bodyLink);}
-    a:visited{text-decoration: none; color: var(--bodyLink);}
+    a:link{text-decoration: dotted underline; color: var(--bodyLink);}
+    a:hover{text-decoration: none; color: var(--bodyLink);}
+    a:visited{text-decoration: dotted underline; color: var(--bodyLink);}
+}
+
+@media only screen and (orientation: portrait) {
+    .sideBySide{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+
 }
 
 .sideBySide{
@@ -98,6 +111,7 @@ body{
         width: 50%
     }
     img{
+        margin: auto;
         height: 100%;
     }
 }
